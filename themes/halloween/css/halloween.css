@@ -1,0 +1,192 @@
+:root {
+  /* halloween */
+  --main-clr: #ff0000;
+  --secondary-clr: #561f55;
+  --tertiary-clr: #272121;
+  --fourth-clr: #ff4d00;
+}
+section:not(#homepage) {
+  /* halloween */
+  background-color: var(--fourth-clr) !important;
+  padding-top: 120px;
+}
+#homepage .big-img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  /* halloween */
+  background-color: var(--fourth-clr);
+  background-image: url("/themes/halloween/HalloweenBG1.png");
+  background-size: cover;
+  background-position: left;
+  background-repeat: no-repeat;
+}
+
+.halloween-animation::before,
+.halloween-animation::after {
+  display: block;
+  content: "";
+  height: 20px;
+  width: 15px;
+  position: absolute;
+  opacity: 0;
+  transition: all 250ms ease-in-out;
+}
+
+.halloween-animation:hover::before,
+.halloween-animation:hover::after {
+  opacity: 1;
+}
+
+.halloween-animation:hover::before {
+  /* to avoid transition jank in chrome make sure transitions don't include transform */
+  right: -40px;
+  animation: float-right 3s ease-in-out infinite;
+}
+
+.halloween-animation:hover::after {
+  height: 40px;
+  width: 30px;
+  top: -45px;
+  transform: rotate(-10deg);
+  animation: float-top 3s ease-in-out infinite;
+}
+
+@keyframes float-right {
+  50% {
+    transform: rotate(10deg) translate(0, -15px);
+  }
+}
+@keyframes float-top {
+  50% {
+    transform: rotate(-5deg) translate(0, 10px);
+  }
+}
+.halloween-animation::before {
+  right: 0;
+  bottom: 0;
+  background-image: url("/themes/halloween/Ghost.png");
+  background-repeat: no-repeat;
+  height: 72px;
+  width: 72px;
+}
+header h2::before {
+  content: "";
+  position: fixed;
+  right: 60%;
+  top: -5px;
+  height: 72px;
+  width: 72px;
+  background: url("/themes/halloween/Spider.png") no-repeat;
+  transition: all 250ms ease;
+  animation: float-top 2s ease-in-out infinite;
+}
+li {
+  background: url("/themes/halloween/Cobweb2.png") no-repeat;
+  background-size: 40px;
+}
+.halloween-animation {
+  position: relative;
+  display: inline-block;
+}
+
+@media (max-width: 1200px) {
+  .halloween-animation::before {
+    content: none;
+  }
+  header h2::before {
+    position: fixed;
+    left: 10%;
+    top: -5px;
+    height: 100px;
+    transition: all 250ms ease;
+    animation: float-top 2s ease-in-out infinite;
+  }
+}
+@media (max-width: 800px) {
+  header h2::before {
+    position: fixed;
+    left: 1%;
+    top: -1px;
+    height: 60px;
+    transition: all 250ms ease;
+    animation: float-top 2s ease-in-out infinite;
+  }
+}
+.btn {
+  background-image: url("/themes/halloween/Halloween-BG-Mask-1.png");
+  background-size: contain;
+  background-position: center;
+}
+#portfolio .card {
+  position: relative;
+}
+#portfolio .card::before {
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: 0px;
+  content: "";
+  height: 300px;
+  width: 60px;
+  background: url("/themes/halloween/Sigil1-Light.png");
+}
+#portfolio .card::after {
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  top: 0px;
+  content: "";
+  height: 300px;
+  width: 60px;
+  background: url("/themes/halloween/Sigil2-Light.png");
+}
+h1,
+h2 {
+  font-family: "Creepster", cursive;
+}
+h3,
+h4 {
+  font-family: "Eater", cursive;
+}
+#about h3 {
+  position: relative;
+}
+
+#about h3::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: -130%;
+  left: 45%;
+  width: 72px;
+  height: 72px;
+  background: url("/themes/halloween/Dracula.png");
+  background-size: 72px;
+}
+@media (max-width: 800px) {
+  #about h3 {
+    margin-top: 90px;
+  }
+  #about h3::before {
+    left: 38%;
+    top: -155%;
+  }
+}
+#contact form {
+  position: relative;
+}
+
+#contact form::after {
+  content: "LMAO";
+  position: absolute;
+  display: inline-block;
+  top: -10%;
+  right: 0%;
+  background: url("/themes/halloween/Pompkin.png");
+  width: 72px;
+  height: 72px;
+}

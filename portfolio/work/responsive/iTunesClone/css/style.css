@@ -1,0 +1,331 @@
+/*Global*/
+* {
+  margin-top: 0;
+}
+
+body {
+  margin: 0;
+  font-size: 62.5%;
+  font-family: "PT Sans", sans-serif;
+  color: white;
+  background-color: #252529;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 6.4em;
+}
+
+h2 {
+  font-size: 4em;
+}
+
+h3 {
+  font-size: 3.2em;
+}
+
+h4 {
+  font-size: 2.4em;
+}
+h5{
+	font-size: 1.9em;
+	font-weight: 400;
+}
+p {
+  font-size: 2.1em;
+}
+
+.tiny {
+  font-size: 1.6em;
+}
+
+.btn {
+  padding: 1.2em 1em;
+  background-color: #b90415;
+  color: white;
+  font-size: 1.6em;
+  text-decoration: none;
+}
+
+/*Header*/
+/*Nav*/
+header {
+  height: 100vh;
+}
+
+nav {
+  height: 40px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background-color: #333333;
+  font-size: 1.6em;
+}
+
+nav ul {
+  padding-top: .7em;
+  padding-left: 1em;
+  display: flex;
+  list-style: none;
+}
+
+nav li {
+  align-self: center
+}
+
+nav a{
+  text-decoration: none;
+  color: #e4e4e4;
+  padding: 0.9em 1.5em;
+  background-color: inherit;
+}
+nav .responsivity{
+	display: none;
+}
+nav ul a:hover {
+  background-color: #444;
+}
+
+/*Showcase*/
+#showcase {
+  margin-top: 0;
+  background-image: url(https://jolly-kalam-23776e.netlify.app/mytunes/img/showcase.jpeg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+}
+
+#showcase h1 {
+  padding-top: 190px;
+}
+
+/*Music*/
+#music h2::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: '\f001';
+  padding-right: 10px;
+}
+
+#music h2 {
+  padding-top: 40px;
+  padding-bottom: 10px;
+}
+
+#music p {
+  padding-top: 10px;
+  line-height: 1.6;
+  margin-bottom: 2em;
+}
+
+#music a:hover {
+  background-color: #d3071b;
+}
+
+#music .tiny {
+  margin-top: 2em;
+  margin-bottom: 1em;
+}
+
+#music img {
+  width: 100%;
+  margin-bottom: 2em;
+}
+
+/*Video*/
+#video {
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+#video h3 {
+  padding-top: 80px;
+}
+
+#video p {
+  line-height: 1.6;
+  margin-bottom: 2em;
+}
+
+#video a {
+  background-color: #103063;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  width: 10%;
+}
+
+#video a:hover {
+  background-color: #143f85;
+}
+
+#video img {
+  margin: 3em 0;
+	position: center;
+	width: 90%
+}
+/*Showcase2*/
+#showcase2 {
+  min-height: 550px;
+  background-image: url(https://jolly-kalam-23776e.netlify.app/mytunes/img/section-bg.jpeg);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+}
+
+#showcase2 h3 {
+  padding-top: 200px;
+}
+#showcase2 p {
+	padding-bottom: 9em;
+	margin-bottom: 0;
+}
+
+/*Gift-cards*/
+#gift-cards {
+  background-color: #f4f4f4;
+  color: #333;
+  text-align: left;
+  padding-top: 4em;
+	padding-bottom: 2em;
+}
+
+#gift-cards .grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+#gift-cards img {
+  width: 100%;
+}
+
+#gift-cards aside {
+  padding: 0 1em;
+}
+
+#gift-cards h4 {
+  padding-top: 1em;
+}
+
+#gift-cards p {
+  line-height: 1.6;
+  position: relative;
+}
+
+#gift-cards p::after {
+  content: '';
+  position: absolute;
+	display: block;
+	bottom: -1em;
+  width: 100%;
+  height: 1.5px;
+  background-color: #9a9a9a;
+}
+#gift-cards a{
+	position: relative;
+	top: 1em;
+	text-decoration: none;
+	font-size: 1.6em;
+	color: #1f3d6d;
+}
+#gift-cards a::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: '\f054';
+	padding-right: .2em;
+}
+/*Footer*/
+footer{
+
+ position: relative;
+}
+footer .grid{
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: (2, auto);
+	text-align: left;
+	padding: 6em 4em 6em 8em;
+}
+footer h5{
+	position: relative;
+}
+footer h5::after{
+	content: '';
+  position: absolute;
+	display: block;
+	bottom: -.5em;
+  width: 85%;
+  height: 1.5px;
+  background-color: #555;
+}
+footer ul{
+	display: flex;
+	flex-direction: column;
+	list-style: none;
+	padding-left: 0;
+}
+footer a{
+	text-decoration: none;
+	color: #ccc;
+	font-size: 1.4em;
+	display: block;
+	line-height: 1.6;
+}
+footer p:last-of-type{
+	font-size: 1.6em;
+	height: 55px;
+	background-color: #333333;
+	position: static;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	bottom: 0;
+	width: 100%;
+	margin-bottom: 0;
+}
+/*Media Queries*/
+@media (max-width: 760px) {
+
+	#gift-cards .grid{
+		display: block;
+	}
+	#gift-cards aside{
+    margin-bottom: 15px;
+	}
+	footer .container{
+		display: none;
+	}
+}
+@media (max-width: 585px) {
+	header ul{
+		display: none;
+	}
+	header nav .responsivity{
+
+		display: block;
+		position: relative;
+		text-align: left;
+		top: 10px;
+	}
+	header i{
+		position: absolute;
+		right: 10px;
+		top: 7px;
+		font-size: .8em;
+
+	}
+}
+@media (max-height: 580px) {
+	#showcase p{
+		display: none;
+	}
+
+}

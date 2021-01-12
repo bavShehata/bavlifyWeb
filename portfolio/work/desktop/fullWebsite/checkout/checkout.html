@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="../css_file/put.css">
+  </head>
+  <body>
+<div class="header">
+        <img src="../images/header/Logo.png" alt="Logo">
+        <a href="../index/index.html"><h1>Pick Your Tech</h1></a>
+        <div id = "notloggedin">
+
+          <form id="log_in" method="post" action="../index/index.html">
+              <label>Email &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+              <input type="email" id="Email" value="example@gmail.com" required />
+              <br>
+              <br>
+
+              <label>Password</label>
+              <input type="password" id="Password" value="*********" required/>
+              <input type="submit" id="demo" value="login" />
+          </form>
+          <a href="../sign_up/sign_up.html"> No account? Sign up </a>
+      </div>
+<div id="logged">
+     
+      <div>
+              <h3>You are logged in</h3>
+              <form id= "log_out" action="../index/index.html">
+              <input type="submit" id="log_out_button" value="Log out">
+          </form>
+      </div>
+      </div>
+
+</div>
+
+      
+<div class="rectangle">
+      <div class="navigation">
+        <div class="navbar noselect">
+          <div class="dropdown">
+            <a href="../about_us/about_us.html"><strong>About Us</strong></a>
+          </div>
+
+          <div class="dropdown">
+                    <a href="../products/products.html"> <strong>Products</strong></a>
+                    <div class="dropdown-content">
+                        <a href="../product_template/phones.html">Phones</a>
+                        <a href="../product_template/laptops.html">Laptops</a>
+                        <a href="../product_template/tvs.html">TVs</a>
+                        <a href="../product_template/cameras.html">Cameras</a>
+                        <a href="../product_template/headphones.html">Headphones</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <a href="../branches/branches.html"><strong>Branches</strong></a>
+                    <div class="dropdown-content">
+                        <a href="../branch/alexandria.html">Alexandira</a>
+                        <a href="../branch/nasr_city.html">Nasr City</a>
+                        <a href="../branch/luxor.html">Luxor</a>
+                    </div>
+                </div>
+
+          <div class="dropdown">
+            <a href="../faq/faq.html"><strong>FAQ</strong></a>
+          </div>
+
+          <div class="dropdown">
+            <a href="../contact_us/contact_us.html"><strong>Contact us</strong></a>
+          </div>
+        </div>
+      </div>
+</div>
+
+
+
+                                                            <!--CONTENT-->
+      <div id="checkout"  >
+        <h1>Checkout </h1>
+
+       <form action="../payment_method/payment_method.html" method="post">
+           
+           
+            <label for="firstname">First Name:</label><br>
+  <input type="text" id="firstname" name="firstname" onfocus="myFunction1(this)" onblur="myBlurFunction(this)" required ><br>
+           
+           <label for="lastname"> Last Name:</label><br>
+  <input type="text" id="lastname" name="lastname" onfocus="myFunction1(this)" onblur="myBlurFunction(this)" required><br>
+           
+           <label for="email_checkout">Email:</label><br>
+  <input type="email" id="email_checkout" name="email_checkout" onfocus="myFunction1(this)" onblur="myBlurFunction(this)" required><br>
+           
+           <label for="country">Country:</label><br>
+  <input type="text" id="country" name="country" onfocus="myFunction1(this)" onblur="myBlurFunction(this)" required><br>
+           
+           <label for="postcode">Postal Code:</label><br>
+  <input type="text" id="postcode" name="postcode" onfocus="myFunction1(this)" onblur="myBlurFunction(this)" required><br>  
+           
+           <label for="phonenumber"> Phone Number:</label><br>
+  <input type="text" id="phonenumber" name="phonenumber" onfocus="myFunction1(this)" onblur="myBlurFunction(this)" value="+20" required><br>    
+           
+           
+           <label for="address">Address:</label><br>
+  <input type="text" id="address" name="address" value="" onfocus="myFunction1(this)" onblur="myBlurFunction(this)" required><br>   
+           
+            
+        
+             
+         <br>
+            
+            <input type="submit" id="PaymentMethod"  value="Payment Method"/><br>
+           
+            
+           
+</form>
+          
+        
+          
+    </div>
+
+ <div class="footer">
+      <div class="footer_contact_us">
+        <a href="../contact_us/contact_us.html"><h3>Contact us:</h3></a>
+        <a href="https://www.facebook.com/%22%3E">
+          <img class="facebook_icon" src="../images/footer/facebook.png" alt="facebook">
+        </a>
+        &nbsp;&nbsp;&nbsp;
+        <a href="https://www.instagram.com/%22%3E">
+          <img class="insta_icon" src="../images/footer/instagram.png" alt="instagram">
+        </a>
+        &nbsp;
+        <a href="https://www.twitter.com/%22%3E">
+          <img class="twitter_icon" src="../images/footer/twitter.png" alt="twitter">
+        </a>
+        <br><br>
+        <img id="mail_image" src="../images/footer/mail.png" alt="mail">
+        <br>
+        <a class="footer_anchor" href="mailto:ashrafadel54@gmail.com">
+          &nbsp; putquest@gmail.com
+        </a>
+        <br><br>
+        <img id="phone_image" src="../images/footer/phone.png" alt="phone">
+        <p id="phone_number">+20 111 222 3333</p>
+      </div>
+
+      <div class="footer_branches">
+        <a href="../branches/branches.html"><h3>Branches:</h3></a>
+        <ul>
+          <li><a href="../branch/alexandria.html"> Alexandria</a></li>
+          <li><a href="../branch/nasr_city.html"> Nasr City</a></li>
+          <li><a href="../branch/luxor.html"> Luxor</a></li>
+        </ul>
+      </div>
+      <div class="footer_products">
+        <a href="../products/products.html"><h3>Products:</h3></a>
+        <ul>
+          <li><a href="../product_template/phones.html">Phones</a></li>
+          <li><a href="../product_template/laptops.html">Laptops</a></li>
+          <li><a href="../product_template/tvs.html">TVs</a></li>
+          <li><a href="../product_template/cameras.html">Cameras</a></li>
+          <li><a href="../product_template/headphones.html">Headphones</a></li>
+           
+        </ul>
+          <br><br>
+      </div> 
+      <div class="footer_bottom">
+    &copy; PickYourTech.com
+      </div>
+</div>      
+      
+      <script src="../javascript/put.js"></script>
+  </body>
+</html>
