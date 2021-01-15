@@ -2,7 +2,6 @@
 const showNav = () => {
   const links = document.querySelectorAll("nav li");
   const icon = document.querySelector("header .icon");
-  console.log("obj");
   links.forEach((link) => {
     const disp = window.getComputedStyle(link).getPropertyValue("display");
     if (link.id != "ham-btn") {
@@ -41,24 +40,16 @@ scrollBtn.addEventListener("click", (btn) => {
 //Section focus on navigation
 var isInViewport = function (elem) {
   var bounding = elem.getBoundingClientRect();
-  console.log(-bounding.top);
-  if (elem.id == "contact") {
-    console.log(elem);
-    console.log(bounding.top);
-    console.log(bounding.bottom);
-  }
   return -bounding.top >= -100 && -bounding.top <= bounding.height - 100;
 };
 const sections = document.querySelectorAll("main section");
 
 window.addEventListener("scroll", function (event) {
-  console.log(sections);
   sections.forEach((section) => {
     if (
       document.body.scrollTop ==
       document.body.scrollHeight - document.body.clientHeight
     ) {
-      console.log("YAAAAAAAAAAAAAAAY");
       document
         .querySelector(`a[href="#${section.id}"]`)
         .parentElement.classList.remove("active");
@@ -66,7 +57,6 @@ window.addEventListener("scroll", function (event) {
         .querySelector(`a[href="#contact"]`)
         .parentElement.classList.add("active");
     } else if (isInViewport(section)) {
-      console.log("lmao");
       var active = document.querySelector(`a[href="#${section.id}"]`)
         .parentElement;
       active.classList.add("active");
@@ -74,10 +64,44 @@ window.addEventListener("scroll", function (event) {
       var inactive = document.querySelector(`a[href="#${section.id}"]`)
         .parentElement;
       inactive.classList.remove("active");
-      console.log(section.id);
     }
   });
 });
+// Hiding navBar when user stops scrolilng
+const navMenu = document.querySelector("header");
+var isScrolling;
+// Listen for scroll events
+window.addEventListener(
+  "scroll",
+  () => {
+    navMenu.style.zIndex = "2";
+    navMenu.style.opacity = "1";
+    // Clear our timeout throughout the scroll
+    window.clearTimeout(isScrolling);
+    // Set a timeout to run after scrolling ends
+    isScrolling = setTimeout(function () {
+      // Run the callback
+      navMenu.style.opacity = "0";
+      // display is None
+      setTimeout(() => {
+        navMenu.style.zIndex = "-99";
+      }, 1000);
+    }, 1500);
+  },
+  false
+);
+
+// Shwoing navBar on hover:
+document.onmousemove = handleMouseMove;
+function handleMouseMove(event) {
+  event = event || window.event; // IE-ism
+  if (event.clientY <= 100) {
+    navMenu.style.zIndex = "2";
+    navMenu.style.opacity = "1";
+  }
+  // Use event.pageX / event.pageY here
+}
+
 //pop-up menu for services definitions
 // adding a hover after each list item
 const definitionsWindow = document.querySelector("#services #definitions");
@@ -196,7 +220,7 @@ customServicesShowBtn.addEventListener("click", () => {
 function removeCSS() {
   var head = document.getElementsByTagName("head")[0];
   var style = document.createElement("link");
-  style.href = "/themes/halloween/style/halloween.css";
+  style.href = "/themes/halloween/css/halloween.css";
   style.type = "text/css";
   style.rel = "stylesheet";
   head.append(style);
@@ -208,7 +232,7 @@ themeBtn.addEventListener("click", () => {
     var head = document.getElementsByTagName("head")[0];
     var style = document.createElement("link");
     var logo = document.querySelector("#logo");
-    style.href = "/themes/halloween/style/halloween.css";
+    style.href = "/themes/halloween/css/halloween.css";
     style.type = "text/css";
     style.rel = "stylesheet";
     style.id = "halloween";
