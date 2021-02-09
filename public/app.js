@@ -1,3 +1,12 @@
+// TODO: Sanitize input
+// TODO: Clean the portfolio
+// TODO: Finish slider and customize it
+// TODO: Fix images
+// TODO: Check the halloween theme
+// TODO: Add new themes (Valentine)
+// TODO: Design a new logo
+// TODO: minimize fonts
+
 //Show and Hide the navigation on smaller screens
 const showNav = () => {
   const links = document.querySelectorAll("nav li");
@@ -91,7 +100,7 @@ window.addEventListener(
   false
 );
 
-// Shwoing navBar on hover:
+// Showing navBar on hover:
 document.onmousemove = handleMouseMove;
 function handleMouseMove(event) {
   event = event || window.event; // IE-ism
@@ -102,117 +111,6 @@ function handleMouseMove(event) {
   // Use event.pageX / event.pageY here
 }
 
-//pop-up menu for services definitions
-// adding a hover after each list item
-const definitionsWindow = document.querySelector("#services #definitions");
-const serviceCards = document.querySelectorAll("#services .card");
-var bodyScrollbar = document.querySelector("#services").style.overflow;
-var serviceLIArray = [
-  "semanticDef",
-  "langaugesDef",
-  "browserDef",
-  "userDef",
-  "responsiveDef",
-  "SEODef",
-];
-var test = 0;
-serviceCards.forEach((serviceCard) => {
-  var i = 0;
-  var serviceLIs = serviceCard.querySelectorAll("ul li");
-  serviceLIs.forEach((serviceLI) => {
-    if (
-      !(
-        serviceLI.classList.contains("flat-price") ||
-        serviceLI.classList.contains("none") ||
-        serviceLI.classList.contains("pay")
-      )
-    ) {
-      var clickedDefinition = document.querySelector(`#${serviceLIArray[i]}`);
-      i++;
-      serviceLI.innerHTML += ` <i class="far fa-question-circle"></i>`;
-      serviceLI.querySelector("i").style.cursor = "pointer";
-      serviceLI.querySelector("i").addEventListener("click", () => {
-        definitionsWindow.style.display = "inline-block";
-        bodyScrollbar = "hidden";
-        clickedDefinition.style.display = "inline-block";
-        //closing the window
-        //close button
-        const closeBtn = clickedDefinition.querySelector(".btn");
-        closeBtn.addEventListener("click", () => {
-          definitionsWindow.querySelector(".container").scrollTop = 0;
-          clickedDefinition.style.display = "none";
-          definitionsWindow.style.display = "none";
-          bodyScrollbar = "auto";
-        });
-        //clicking outside
-
-        definitionsWindow.addEventListener("click", function () {
-          if (
-            !definitionsWindow
-              .querySelector(".container")
-              .contains(event.target)
-          ) {
-            definitionsWindow.querySelector(".container").scrollTop = 0;
-            clickedDefinition.style.display = "none";
-            definitionsWindow.style.display = "none";
-            bodyScrollbar = "auto";
-          }
-        });
-      });
-    }
-  });
-});
-//Showing the hosting importance window
-const hostingLink = document.querySelector(".hosting");
-const hostingDef = document.querySelector("#hostingDef");
-hostingLink.addEventListener("click", () => {
-  definitionsWindow.style.display = "inline-block";
-  bodyScrollbar = "hidden";
-  hostingDef.style.display = "inline-block";
-  //closing the window
-  //close button
-  const closeBtn = hostingDef.querySelector(".btn");
-  closeBtn.addEventListener("click", () => {
-    definitionsWindow.querySelector(".container").scrollTop = 0;
-    hostingDef.style.display = "none";
-    definitionsWindow.style.display = "none";
-    bodyScrollbar = "auto";
-  });
-  //clicking outside
-
-  definitionsWindow.addEventListener("click", function () {
-    if (!definitionsWindow.querySelector(".container").contains(event.target)) {
-      definitionsWindow.querySelector(".container").scrollTop = 0;
-      hostingDef.style.display = "none";
-      definitionsWindow.style.display = "none";
-      bodyScrollbar = "auto";
-    }
-  });
-});
-// Toggle custom Services
-const customServicesScreen = document.querySelector("#customServices");
-const customServicesHideBtn = document.querySelector("#showPackages");
-const customServicesShowBtn = document.querySelector("#showCustomServices");
-const crossScreen = document.querySelector(".cross");
-const scaleAnimation = document.querySelector(".scale");
-//Hide custom Services
-customServicesHideBtn.addEventListener("click", () => {
-  customServicesScreen.style.display = "none";
-  crossScreen.style.display = "none";
-  customServicesShowBtn.style.display = "inline-block";
-  serviceCards.forEach((card) => {
-    card.style.opacity = "1";
-  });
-});
-//Show custom Services
-customServicesShowBtn.addEventListener("click", () => {
-  customServicesScreen.style.display = "flex";
-  crossScreen.style.display = "block";
-  customServicesShowBtn.style.display = "none";
-  serviceCards.forEach((card) => {
-    card.style.opacity = ".4";
-  });
-});
 //themes
 //Halloween
 
@@ -246,3 +144,53 @@ themeBtn.addEventListener("click", () => {
     logo.classList.remove("halloween-animation");
   }
 });
+
+// Portfolio slideshow
+var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides((slideIndex += n));
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides((slideIndex = n));
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {
+    slideIndex = 1;
+  }
+  if (n < 1) {
+    slideIndex = slides.length;
+  }
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex - 1].style.display = "block";
+  dots[slideIndex - 1].className += " active";
+}
+// Automatic slider
+
+// var slideIndex = 0;
+// showSlides();
+//
+// function showSlides() {
+//   var i;
+//   var slides = document.getElementsByClassName("mySlides");
+//   for (i = 0; i < slides.length; i++) {
+//     slides[i].style.display = "none";
+//   }
+//   slideIndex++;
+//   if (slideIndex > slides.length) {slideIndex = 1}
+//   slides[slideIndex-1].style.display = "block";
+//   setTimeout(showSlides, 2000); // Change image every 2 seconds
+// }
