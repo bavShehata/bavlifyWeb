@@ -1,4 +1,5 @@
 // TODO: Sanitize input
+// TODO: Error Messages for form
 // TODO: Clean the portfolio
 // TODO: Finish slider and customize it
 // TODO: Fix images
