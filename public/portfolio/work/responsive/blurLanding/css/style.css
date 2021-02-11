@@ -54,7 +54,7 @@ header h1 {
   position: absolute;
   height: inherit;
   width: 100%;
-  background-image: url(https://image.ibb.co/gzOBup/showcase.jpg);
+  background-image: url("../showcase.jpg");
   background-position: center;
   background-size: cover;
   filter: blur(10px);
