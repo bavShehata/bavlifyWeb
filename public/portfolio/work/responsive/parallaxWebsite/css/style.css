@@ -1,70 +1,85 @@
 /*Global*/
-*{
+* {
   margin: 0;
+  padding: 0;
 }
-body{
+body {
   margin: 0;
   font-family: Lato, sans-serif;
   font-size: 62.5%;
-  color: #fff;
   background-color: transparent;
   text-align: center;
 }
-h1{
+h1 {
   font-size: 2.7em;
   background-color: #595959;
-  padding: .5em 1em;
   display: inline;
   letter-spacing: 7;
   font-weight: 400;
+  color: white;
 }
-h2{
-  font-size: 2.4em;
-  padding-top: 3em;
-}
-p{
+p {
   font-size: 1.6em;
   line-height: 1.6;
   padding: 1em;
 }
 /*Imgs*/
-div{
+div {
   position: relative;
   width: 100%;
+  opacity: 0.7;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  opacity: 0.7;
   background-attachment: fixed;
 }
-.img1{
-  background-image: url(https://jolly-kalam-23776e.netlify.app/parallaxsite/img/image1.jpg);
+.img1 {
+  background-image: url("../image1.jpg");
   height: 100vh;
 }
-.img2{
-  background-image: url(https://jolly-kalam-23776e.netlify.app/parallaxsite/img/image2.jpg);
-  height: 100%;
+.img2 {
+  background-image: url("../image2.jpg");
+  height: 60vh;
 }
-.img3{
-  background-image: url(https://jolly-kalam-23776e.netlify.app/parallaxsite/img/image3.jpg);
-  height: 100%;
+.img3 {
+  background-image: url("../image3.jpg");
+  height: 50vh;
 }
 /*Header*/
 header,
-#last{
+#last {
   position: relative;
   height: 100vh;
 }
-header h1,
-#last h1{
+header ul {
+  color: black;
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translate(-50%, -50%);
   left: 50%;
-  transform: translateX(-50%);
+  display: flex;
+  list-style: none;
+  font-size: clamp(2.5rem, 10vw, 3rem);
+}
+section p {
+  transition: all 1s;
+}
+section div,
+section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  flex-direction: column;
+}
+#last h1 {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  left: 50%;
 }
 /*One*/
-#one{
+#one {
   min-height: 50vh;
   width: 100%;
   background-color: #f4f4f4;
@@ -72,30 +87,16 @@ header h1,
 }
 /*Imgtwotext*/
 #imgtwotext,
-#imgthreetext{
+#imgthreetext {
   min-height: 60vh;
-}
-#imgtwotext h1,
-#imgthreetext h1{
-  position: relative;
-  top: 7em;
-  background-color: transparent;
 }
 /*Two & Three*/
 #two,
-#three{
-  min-height: 45vh;
-  wdith: 100%;
+#three {
   color: #dddddd;
   background-color: #282e34;
 }
 /*Last*/
-#Last{
+#Last {
   height: 100vh;
-}
-/*Media Query*/
-@media (max-width: 500px) {
-  div{
-    background-attachment: scroll;
-  }
 }

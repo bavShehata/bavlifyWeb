@@ -51,6 +51,7 @@ textarea {
 .btn {
   text-transform: capitalize !important;
   font-family: "Noto Serif", serif;
+  transition: all 0.3s ease-out;
 }
 section:not(#homepage) {
   background-color: #e3ddc5 !important;
@@ -95,6 +96,7 @@ textarea,
 a {
   font-size: clamp(1.5rem, 2.5vw, 2.5rem);
   color: var(--tertiary-clr);
+  transition: all 0.3s ease-out;
 }
 .container {
   width: 90%;
