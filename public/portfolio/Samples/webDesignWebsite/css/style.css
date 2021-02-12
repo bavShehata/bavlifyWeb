@@ -1,0 +1,317 @@
+/*Global*/
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 62.5%;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+main {
+  flex: 1 0 auto;
+}
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+.highlight,
+#active {
+  color: #e8491d;
+  font-weight: bold;
+}
+button,
+input,
+textarea {
+  height: 40px;
+  border: none;
+}
+textarea {
+  padding: 7px 10px;
+}
+input {
+  padding-left: 10px;
+}
+/*Header*/
+header {
+  min-height: 100px;
+  background-color: #35424a;
+  display: flex;
+  align-items: center;
+  border-bottom: 3px #e8491d solid;
+}
+header h2 {
+  font-size: 2.9em;
+  float: left;
+  color: white;
+}
+#ham-btn {
+  display: none;
+}
+header ul {
+  float: right;
+  margin-top: 29px;
+}
+header li {
+  display: inline;
+  text-transform: uppercase;
+  font-size: 1.7em;
+}
+header li a {
+  margin: 0 17px;
+  text-decoration: none;
+  color: white;
+}
+header a:hover {
+  color: #a5a5a5;
+  font-weight: bold;
+}
+/*Showcase*/
+#showcase {
+  min-height: 400px;
+  background: url("../img/showcase.jpg") no-repeat 0 -400px;
+  text-align: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#showcase h1 {
+  margin-top: 0;
+  font-size: clamp(2.5rem, 10vw, 4rem);
+  padding: 20px;
+}
+#showcase p {
+  font-size: 2em;
+}
+/*Newsletter*/
+#newsletter {
+  background-color: #35424a;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+
+#newsletter h3 {
+  font-size: 2.3em;
+  margin-left: 10px;
+  float: left;
+  color: white;
+}
+#newsletter form {
+  float: right;
+  margin-top: 17px;
+}
+#newsletter input[type="email"] {
+  font-size: 1.3em;
+  width: 270px;
+}
+#newsletter button {
+  width: 90px;
+  background-color: #e8491d;
+  color: white;
+}
+/*boxes*/
+#boxes {
+  background-color: #f4f4f4;
+  text-align: center;
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+}
+#boxes h4 {
+  font-size: 23px;
+}
+#boxes p {
+  font-size: 15px;
+  line-height: 20px;
+}
+#boxes img {
+  width: 80px;
+}
+#boxes .box {
+  float: left;
+  width: 33%;
+}
+/*Aboutus*/
+#aboutus {
+  min-height: 220px;
+}
+#aboutus h5 {
+  font-size: 1.8em;
+}
+#aboutus section {
+  float: left;
+  width: 62%;
+}
+#aboutus p {
+  font-size: 1.5em;
+}
+#aboutus aside {
+  float: right;
+  width: 28%;
+  background-color: #35424a;
+  color: white;
+  padding: 10px;
+  margin-top: 30px;
+}
+/*services-quote*/
+#services-quote {
+  margin-bottom: 20px;
+}
+#services-quote h5 {
+  margin-top: 20px;
+  font-size: 1.8em;
+}
+#services-quote article {
+  background-color: #e6e6e6;
+  min-height: 200px;
+  border: #cccccc 2px solid;
+  margin-bottom: 10px;
+}
+#services-quote article h5 {
+  margin-top: 10px;
+  padding-left: 15px;
+  margin-bottom: 0;
+  padding-top: 30px;
+}
+#services-quote p {
+  font-size: 1.5em;
+  padding: 15px;
+  margin: 0;
+}
+#services {
+  width: 65%;
+  float: left;
+}
+#quote {
+  margin-top: 25px;
+  width: 30%;
+  float: right;
+  background-color: #35424a;
+  color: white;
+}
+#quote label,
+#quote input,
+#quote textarea,
+#quote h5,
+#quote button {
+  margin-left: 15px;
+  margin-top: 5px;
+  display: block;
+}
+#quote h5 {
+  padding-top: 25px;
+}
+#quote label {
+  font-size: 15px;
+}
+#quote input,
+textarea {
+  width: 88%;
+  padding: 10px inherit;
+}
+#quote input {
+  height: 30px;
+}
+#quote button {
+  margin-top: 10px;
+  background-color: #e8491d;
+  color: white;
+  width: 25%;
+}
+/*footer*/
+footer {
+  text-align: center;
+  padding: 20px;
+  margin-top: 10px;
+  font-size: 1.5em;
+  background-color: #e8491d;
+  color: white;
+}
+@media (max-width: 876px) {
+  header h2,
+  header ul,
+  #newsletter h3,
+  #newsletter form,
+  #newsletter form button,
+  #aboutus section,
+  #aboutus aside,
+  #services,
+  #quote {
+    float: none;
+    text-align: center;
+  }
+  header ul {
+    padding: 0;
+    padding-bottom: 20px;
+  }
+  #boxes {
+    display: flex;
+    flex-direction: column;
+  }
+  #boxes .box {
+    display: block;
+    width: 100%;
+  }
+  #newsletter form button,
+  #newsletter input {
+    width: 270px;
+    margin-top: 10px;
+  }
+
+  #aboutus {
+    min-height: 500px;
+  }
+  #aboutus section,
+  #aboutus aside {
+    width: 80%;
+    margin-left: 25px;
+  }
+  #services,
+  #quote {
+    width: 100%;
+  }
+  #quote label,
+  #quote h5,
+  #quote input,
+  #quote textarea {
+    margin-left: 0;
+  }
+  #quote,
+  #quote form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+  }
+  #quote button {
+    margin: 15 auto;
+  }
+}
+@media (max-width: 500px) {
+  header {
+    position: relative;
+  }
+  nav ul {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 45%;
+    left: 50%;
+    transform: translateX(-50.1%);
+    width: 100%;
+    background-color: #35424a;
+  }
+  nav li:not(#ham-btn) {
+    display: none;
+    padding-top: 10px;
+  }
+  nav li {
+  }
+  #ham-btn {
+    display: initial;
+  }
+}

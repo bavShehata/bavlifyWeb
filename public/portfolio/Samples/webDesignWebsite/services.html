@@ -1,0 +1,112 @@
+<!DOCTYPE html/>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <!--160 characters max-->
+    <meta name="keywords" content="x, y" />
+    <meta name="author" content="Bavly Shehata" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <title>Services</title>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h2><span class="highlight">Corps</span> Web Design</h2>
+        <nav>
+          <ul>
+            <li id="ham-btn">
+              <a href="javascript:void(0);" class="icon" onclick="showNav()">
+                <i class="fa fa-bars"></i>
+              </a>
+            </li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html" id="active">Services</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <section id="newsletter">
+      <div class="container">
+        <h3>Subscribe to our Newsletter</h3>
+        <form action="services.html" method="POST">
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Enter email..."
+          />
+          <button type="submit" name="subscribe" id="subscribe">
+            Subscribe
+          </button>
+        </form>
+      </div>
+    </section>
+    <section id="services-quote">
+      <div class="container">
+        <section id="services">
+          <h5>Services</h5>
+          <article>
+            <h5>Website Design</h5>
+            <p>
+              We have a bunch of very talented Web desigers, who will give you
+              the most modern and beautiful design.
+            </p>
+            <p>Pricing: $1,000 - $3,000</p>
+          </article>
+          <article>
+            <h5>Website Maintenance</h5>
+            <p>
+              We will maintain and upgrate your website to the latest software
+              and will provide you a down-time less than 1 mins
+            </p>
+            <p>Pricing: $250 per month</p>
+          </article>
+          <article>
+            <h5>Website Hosting</h5>
+            <p>
+              We have our own farm, which comprises of the latest xeron blades.
+              We have a down-time of less then 30 mins.
+            </p>
+            <p>Pricing: $25 per month</p>
+          </article>
+        </section>
+        <aside id="quote">
+          <h5>Get A Quote</h5>
+          <form action="index.html" method="POST">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" placeholder="Name" />
+            <label for="email">Email</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Email Address"
+            />
+            <label for="message">Message</label>
+            <textarea
+              name="message"
+              id="message"
+              cols="30"
+              rows="10"
+              placeholder="Message"
+            ></textarea>
+            <button type="submit">Send</button>
+          </form>
+        </aside>
+      </div>
+    </section>
+    <footer>
+      <div class="container">
+        <p>Corps Web Design, Copyright &copy; 2019</p>
+      </div>
+    </footer>
+    <script
+      src="https://kit.fontawesome.com/6751b3949e.js"
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript" src="app.js"></script>
+  </body>
+</html>
