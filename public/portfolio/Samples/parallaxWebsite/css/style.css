@@ -52,14 +52,14 @@ header,
   height: 100vh;
 }
 header ul {
-  color: black;
+  color: #595959;
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);
   left: 50%;
   display: flex;
   list-style: none;
-  font-size: clamp(2.5rem, 10vw, 3rem);
+  font-size: clamp(3rem, 10vw, 4rem);
 }
 section p {
   transition: all 1s;

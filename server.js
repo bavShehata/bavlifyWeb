@@ -37,8 +37,11 @@ app.set("view engine", "ejs");
 // const bookRoutes = require("./routes/bookRoutes");
 // const userRoutes = require("./routes/userRoutes");
 const mainControllers = require("./controllers/mainControllers");
+const portfolioControllers = require("./controllers/portfolioControllers");
 
 //User Routes
 app.get("/", mainControllers.getIndex);
 app.post("/", mainControllers.postContact);
+app.get("/portfolio", portfolioControllers.portfolioForm);
+app.post("/portfolio", portfolioControllers.addPortfolio);
 app.get("/contact/success", mainControllers.getContactSuccess);

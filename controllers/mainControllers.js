@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 const Contact = require("../models/contactModel");
+const Portfolio = require("../models/portfolioModel");
 var nodemailer = require("nodemailer");
 require("dotenv/config");
 
@@ -7,7 +8,9 @@ module.exports = {
   //Show index page
   getIndex: async (req, res) => {
     try {
-      res.render("mainViews/index.ejs");
+      const portfolios = await Portfolio.find();
+      console.log("Number of portfolios: ", portfolios.length);
+      res.render("mainViews/index.ejs", { portfolios });
     } catch (e) {
       console.log("Couldn't show index page\n", e);
     }
