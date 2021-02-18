@@ -5,7 +5,8 @@ module.exports = {
   //Show all portfolios
   getPortfolios: async (req, res) => {
     try {
-      const portfolios = await Portfolio.find();
+      // const portfolios = await Portfolio.find();
+      portfolios = [];
       console.log("Number of portfolios: ", portfolios.length);
       res.render("mainViews/index.ejs", { portfolios });
     } catch (e) {

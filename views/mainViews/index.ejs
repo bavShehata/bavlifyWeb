@@ -3,19 +3,17 @@
     <%- include("../partials/head.ejs") %>
   </head>
   <body>
-    <header>
-      <%- include("../partials/header.ejs") %>
-    </header>
-    <main>
-      <button class="btn" id="theme">Halloween!</button>
-      <a href="" class="btn" id="scrollTop"
-      ><i class="fas fa-arrow-alt-circle-up fa-2x"></i
-      ></a>
-      <section id="homepage">
+    <div id="hero">
+      <header>
+        <%- include("../partials/header.ejs") %>
+      </header>
+      <section>
         <%- include("../partials/hero.ejs") %>
       </section>
+    </div>
+      <main>
       <section id="portfolio">
-        <%- include("../partials/portfolio.ejs") %>
+         <%- include("../partials/portfolio.ejs") %>
       </section>
       <section id="about">
         <%- include("../partials/about.ejs") %>
