@@ -20,6 +20,11 @@ mongoose
   .then(
     app.listen(8001, () => {
       console.log("Listening on port 8001");
+      let width = 360;
+      let large = width * 0.56;
+      let medium = large * 0.674;
+      let small = large * 0.52;
+      console.log(large, medium, small);
     })
   )
   .catch((error) => console.log("Couldn't connect to database\n", error));

@@ -12,6 +12,9 @@
   --tertiary-clr: #7c0dd1;
   --accent-clr: #9d36e1;
   --white-clr: #fff;
+  --large-circle-size: 56vw;
+  --medium-circle-size: calc(var(--large-circle-size) * 0.674);
+  --small-circle-size: calc(var(--large-circle-size) * 0.52);
   font-size: 62.5%;
   scroll-behavior: smooth;
 }
@@ -21,7 +24,7 @@ body {
   display: flex;
   flex-direction: column;
   height: 100%;
-  font-family: "EB Garamond", serif;
+  font-family: "Bodoni Moda", serif;
   color: var(--white-clr);
 }
 a {
@@ -32,11 +35,11 @@ a:focus {
   color: var(--accent-clr);
 }
 h1 {
-  font-size: clamp(3rem, 3vw, 6rem);
+  font-size: clamp(2.3rem, 5vw, 6rem);
 }
 h2,
 .btn {
-  font-size: clamp(2.5rem, 2vw, 4rem);
+  font-size: clamp(1.8rem, 4vw, 4rem);
 }
 h3 {
   font-size: clamp(2rem, 1vw, 3rem);
@@ -57,12 +60,17 @@ textarea {
   top: 40vh;
   right: 10vw;
 }
+.flex {
+}
+.center {
+  width: 100%;
+  margin: 0 auto;
+}
 .btn {
   padding: 1rem 3rem;
 }
 .container {
-  width: clamp(300px, 100vw, 100%);
-  margin: 0 auto;
+  margin: 0 5vw;
 }
 #scrollTop {
   opacity: 0;
@@ -75,6 +83,29 @@ textarea {
 }
 #scrollTop:hover {
   color: var(--secondary-clr);
+}
+#theme {
+  display: none;
+}
+header {
+  text-transform: capitalize;
+  margin: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+#logo img {
+  width: max(3rem, 4vw);
+  margin-right: 1rem;
+}
+nav a {
+  padding: 0.5rem 1rem;
+  background-color: var(--secondary-clr);
+}
+#logo {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
 }
 #hero {
   min-height: 100vh;
@@ -89,39 +120,23 @@ textarea {
   bottom: 0;
   z-index: -2;
 }
-#logo img {
-  width: max(3rem, 4vw);
-  margin-right: 1rem;
+#hero .absolute {
+  top: 2rem;
 }
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
+#hero .absolute.grid:last-child {
+  grid-template-rows:
+    var(--large-circle-size)
+    calc(var(--medium-circle-size) + var(--small-circle-size));
 }
-nav a {
-  padding: 1rem;
-  background-color: var(--secondary-clr);
-}
-
-.heroHeading {
-  display: grid;
-  grid-template-rows: 40vh 25vh 15vh;
-  grid-template-columns: 25vh 15vh;
-  grid-gap: 3rem;
-  grid-template-areas: "upper upper" "lower lower" "lower lower";
-  width: calc(25vh + 15vh + 3rem);
-  margin: 0 auto;
-}
-.heroHeading .text {
+#hero .text {
   place-self: center center;
-  grid-area: upper;
 }
-.heroHeading .text h1 {
-  margin-bottom: 1rem;
+#hero .text h2 {
+  margin-top: 1rem;
 }
 .cta {
+  z-index: 1;
   place-self: center center;
-  grid-area: lower;
   display: flex;
   flex-direction: column;
 }
@@ -133,28 +148,46 @@ nav a {
   background-color: var(--secondary-clr);
   color: white;
 }
+.grid {
+  margin-top: 5rem;
+  z-index: -1;
+  display: grid;
+  grid-template-columns: calc(
+    var(--large-circle-size) + (var(--medium-circle-size) / 2) +
+      (var(--small-circle-size) / 2)
+  );
+  grid-template-rows:
+    var(--large-circle-size)
+    var(--medium-circle-size)
+    var(--small-circle-size);
+  grid-row-gap: min(
+    calc(
+      90vh - 8rem - var(--large-circle-size) - var(--medium-circle-size) -
+        var(--small-circle-size)
+    ),
+    10rem
+  );
+  right: 50%;
+  transform: translateX(50%);
+}
 .large {
+  height: var(--large-circle-size);
   place-self: center center;
-  grid-area: upper;
 }
 .medium {
-  place-self: flex-start flex-start;
-  grid-area: lower;
+  height: var(--medium-circle-size);
+  place-self: center flex-start;
 }
 .small {
-  place-self: flex-end flex-end;
-}
-@media (max-width: 999px) {
-  .small {
-    grid-area: lower;
-  }
+  height: var(--small-circle-size);
+  place-self: center flex-end;
 }
 @media (min-width: 1000px) {
   .heroHeading {
     display: grid;
     grid-template-rows: 40vh 25vh;
     grid-template-columns: 50rem auto calc(17.5vh + 15vh);
-    padding: 3rem 3rem 0 3rem;
+    padding-top: 3rem;
     width: 100%;
   }
   .heroHeading .text {
@@ -166,6 +199,7 @@ nav a {
   }
   .cta {
     place-self: center flex-start;
+    flex-direction: row;
   }
   .large {
     grid-column: 2/4;
@@ -176,28 +210,6 @@ nav a {
   .small {
     place-self: center flex-end;
   }
-}
-header {
-  text-transform: capitalize;
-  margin: 1rem 3rem;
-}
-#logo {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-}
-/* Calculations to center the circles the same as the XD Design */
-.large {
-  height: 40vh;
-  z-index: -1;
-}
-.medium {
-  height: 25vh;
-  z-index: -1;
-}
-.small {
-  height: 15vh;
-  z-index: -1;
 }
 main {
   flex: 1 0 auto;
