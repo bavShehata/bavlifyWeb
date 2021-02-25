@@ -12,7 +12,7 @@
   --tertiary-clr: #7c0dd1;
   --accent-clr: #9d36e1;
   --white-clr: #fff;
-  --large-circle-size: 56vw;
+  --large-circle-size: 60vw;
   --medium-circle-size: calc(var(--large-circle-size) * 0.674);
   --small-circle-size: calc(var(--large-circle-size) * 0.52);
   font-size: 62.5%;
@@ -35,11 +35,11 @@ a:focus {
   color: var(--accent-clr);
 }
 h1 {
-  font-size: clamp(2.3rem, 5vw, 6rem);
+  font-size: clamp(2.3rem, 5vw, 4rem);
 }
 h2,
 .btn {
-  font-size: clamp(1.8rem, 4vw, 4rem);
+  font-size: clamp(1.8rem, 4vw, 3rem);
 }
 h3 {
   font-size: clamp(2rem, 1vw, 3rem);
@@ -162,7 +162,7 @@ nav a {
     var(--small-circle-size);
   grid-row-gap: min(
     calc(
-      90vh - 8rem - var(--large-circle-size) - var(--medium-circle-size) -
+      92vh - 8rem - var(--large-circle-size) - var(--medium-circle-size) -
         var(--small-circle-size)
     ),
     10rem
@@ -182,33 +182,53 @@ nav a {
   height: var(--small-circle-size);
   place-self: center flex-end;
 }
-@media (min-width: 1000px) {
-  .heroHeading {
-    display: grid;
-    grid-template-rows: 40vh 25vh;
-    grid-template-columns: 50rem auto calc(17.5vh + 15vh);
-    padding-top: 3rem;
-    width: 100%;
+@media (orientation: landscape) {
+  .grid {
+    margin-top: 10rem;
+    --large-circle-size: 48vh;
+    --medium-circle-size: calc(var(--large-circle-size) * 0.674);
+    --small-circle-size: calc(var(--large-circle-size) * 0.52);
+    grid-template-columns:
+      calc((var(--large-circle-size) / 2) + (var(--medium-circle-size) / 2))
+      calc((var(--large-circle-size) / 2) + (var(--small-circle-size) / 2));
+    grid-template-rows:
+      var(--large-circle-size)
+      var(--medium-circle-size);
+    grid-row-gap: 0;
+    right: 5vw;
+    transform: none;
   }
-  .heroHeading .text {
-    align-self: center;
+  #hero .absolute.grid:last-child {
+    grid-template-columns: 80vw;
+    grid-template-rows:
+      var(--large-circle-size)
+      var(--medium-circle-size);
+    left: 5vw;
+  }
+  #hero .text {
+    place-self: center flex-start;
     text-align: left;
   }
-  .heroHeading .text h1 {
-    margin-bottom: 1rem;
-  }
   .cta {
+    z-index: 1;
     place-self: center flex-start;
+    display: flex;
     flex-direction: row;
   }
   .large {
-    grid-column: 2/4;
-    place-self: center flex-end;
-    margin-right: 10vh;
+    height: var(--large-circle-size);
+    place-self: center center;
+    grid-column: 1/3;
   }
-  .medium,
+  .medium {
+    height: var(--medium-circle-size);
+    place-self: center flex-start;
+    grid-row: 2/3;
+  }
   .small {
+    height: var(--small-circle-size);
     place-self: center flex-end;
+    grid-row: 2/3;
   }
 }
 main {
