@@ -1,0 +1,49 @@
+<form action="/" method="POST" id="contacting">
+  <div>
+    <img src="/assets/hero/logo.svg" alt="Logo" class="logoImg"/>
+    <h1 class="center">Contact</h1>
+  </div>
+  <div>
+    <label for="fName" id="fNameL">First Name</label>
+    <input
+      type="text"
+      name="fName"
+      id="fName"
+      required
+    />
+  </div>
+  <div>
+    <label for="lName" id="lNameL">Last Name</label>
+    <input
+      type="text"
+      name="lName"
+      id="lName"
+      required
+    />
+  </div>
+  <div>
+    <label for="email">E-mail address</label>
+    <input
+      type="email"
+      name="email"
+      id="email"
+      required
+    />
+  </div>
+  <div>
+    <label for="message">Message</label>
+    <textarea
+      name="message"
+      id="message"
+      placeholder="Time for you business to shine"
+      required
+    ></textarea>
+  </div>
+  <input
+    type="submit"
+    name="submit"
+    id="submit"
+    value="Contact"
+    class="btn"
+  />
+</form>

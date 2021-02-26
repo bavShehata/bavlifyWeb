@@ -4,8 +4,7 @@
 // TODO: Fix images
 // TODO: Check the halloween theme
 // TODO: Add new themes (Valentine)
-// TODO: Design a new logo
-// TODO: minimize fonts
+// TODO: regex for the form, change border color of input on focus and confirmation
 
 //Scroll to the top
 const scrollBtn = document.querySelector("#scrollTop");
