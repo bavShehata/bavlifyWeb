@@ -7,6 +7,8 @@ const bodyParser = require("body-parser");
 const favicon = require("serve-favicon");
 const path = require("path");
 const axios = require("axios");
+const { body, validationResult } = require("express-validator");
+
 //Connect to database
 const app = express();
 
@@ -31,6 +33,7 @@ mongoose
 
 // middleware & static files
 app.use(favicon(path.join(__dirname, "public/assets/hero", "logo.png")));
+app.use("/scripts", express.static(__dirname + "/node_modules/mailcheck/src/"));
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
@@ -39,14 +42,17 @@ app.use(bodyParser.json());
 app.set("view engine", "ejs");
 
 //Routes
-// const bookRoutes = require("./routes/bookRoutes");
-// const userRoutes = require("./routes/userRoutes");
-const mainControllers = require("./controllers/mainControllers");
+const formControllers = require("./controllers/formControllers");
 const portfolioControllers = require("./controllers/portfolioControllers");
 
 //User Routes
-app.get("/", mainControllers.getIndex);
-app.post("/", mainControllers.postContact);
+app.get("/", portfolioControllers.getIndex);
+app.post(
+  "/",
+  formControllers.validateContact,
+  formControllers.sanitizeContact,
+  formControllers.postContact
+);
 app.get("/portfolio", portfolioControllers.portfolioForm);
 app.post("/portfolio", portfolioControllers.addPortfolio);
-app.get("/contact/success", mainControllers.getContactSuccess);
+app.get("/contact/success", formControllers.getContactSuccess);

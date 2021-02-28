@@ -1,29 +1,45 @@
-// TODO: Sanitize input
 // TODO: Error Messages for form
 // TODO: Finish slider and customize it
 // TODO: Fix images
 // TODO: Check the halloween theme
 // TODO: Add new themes (Valentine)
-// TODO: regex for the form, change border color of input on focus and confirmation
+// TODO: change border color of input on focus and confirmation
+// TODO: Feedback to user in case of wrong input or invalid
+// TODO: Redirection when an email is sent? Why though?
 
-//Scroll to the top
-const scrollBtn = document.querySelector("#scrollTop");
-window.addEventListener("scroll", () => {
-  var y = window.scrollY;
-  if (y > 400) {
-    scrollBtn.style.opacity = "1";
-    scrollBtn.style.cursor = "pointer";
+// validating contact input
+const reg = {
+  name: /^[a-z-_ ]{1,20}$/i,
+  email: /^([^@]+)@(.+)\.(.+)$/i, //And send a confirmation Email anyways
+  message: /^[\w\s\-()+]{1,1000}$/,
+};
+
+const validate = (field, regEx) => {
+  if (regEx == undefined) regEx = reg.name;
+  if (regEx.test(field.value)) {
+    field.style.borderColor = "green";
   } else {
-    scrollBtn.style.opacity = "0";
-    scrollBtn.style.cursor = "default";
+    field.style.borderColor = "red";
   }
-});
-scrollBtn.addEventListener("click", (btn) => {
-  btn.preventDefault();
-  if (scrollBtn.style.opacity == "1") {
-    document.body.scrollTop = 0; // For Safari
-    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+  if (field.name == "email") {
+    Mailcheck.run({
+      email: field.value,
+      suggested: function (suggestion) {
+        console.log(`Do you mean ${suggestion.full}?`);
+        field.style.borderColor = "red";
+      },
+      empty: function () {
+        console.log(`You are all set!`);
+        field.style.borderColor = "green";
+      },
+    });
   }
+};
+const inputs = document.querySelectorAll("input");
+inputs.forEach((input) => {
+  input.addEventListener("blur", () => {
+    validate(input, reg[input.name]);
+  });
 });
 
 //themes

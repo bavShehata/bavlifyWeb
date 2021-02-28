@@ -43,7 +43,7 @@ h2,
   font-size: clamp(1.8rem, 4vw, 3rem);
 }
 h3 {
-  font-size: clamp(1.5rem, 1vw, 3rem);
+  font-size: clamp(1.6rem, 1.7vw, 2.5rem);
 }
 p,
 li,
@@ -51,7 +51,7 @@ a,
 input,
 textarea,
 label {
-  font-size: clamp(1.4rem, 2.5vw, 2.5rem);
+  font-size: clamp(1.4rem, 1.5vw, 2.5rem);
 }
 /* Utility Classes */
 .bold {
@@ -272,6 +272,11 @@ textarea {
   margin-top: 0.3rem;
   padding: 0.5rem;
 }
+input:focus,
+textarea:focus {
+  border: 2px solid var(--secondary-clr);
+  background-color: var(--accent-clr);
+}
 #submit {
   margin-top: 5rem;
   background-color: var(--tertiary-clr);
@@ -287,12 +292,13 @@ textarea {
   text-align: center;
   position: relative;
   margin-bottom: 1rem;
+  font-size: 1.8em;
 }
 #contact span::after {
   content: "";
   position: absolute;
   height: 2px;
-  width: 40vw;
+  width: 35vw;
   background-color: white;
   top: 50%;
   right: 0;
@@ -301,7 +307,7 @@ textarea {
   content: "";
   position: absolute;
   height: 2px;
-  width: 40vw;
+  width: 35vw;
   background-color: white;
   top: 50%;
   left: 0;
@@ -314,6 +320,7 @@ textarea {
 }
 .socialMedia a {
   margin: 0.5rem 0;
+  font-size: clamp(1.3rem, 1.3vw, 2.3rem);
 }
 footer {
   flex-shrink: 0;

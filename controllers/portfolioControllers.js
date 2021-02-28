@@ -2,6 +2,16 @@ const mongoose = require("mongoose");
 const Portfolio = require("../models/portfolioModel");
 
 module.exports = {
+  //Show index page
+  getIndex: async (req, res) => {
+    try {
+      const portfolios = await Portfolio.find();
+      console.log("Number of portfolios: ", portfolios.length);
+      res.render("mainViews/index.ejs", { portfolios });
+    } catch (e) {
+      console.log("Couldn't show index page\n", e);
+    }
+  },
   //Show all portfolios
   getPortfolios: async (req, res) => {
     try {
