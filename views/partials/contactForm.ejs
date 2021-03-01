@@ -1,7 +1,5 @@
 <form action="/" method="POST" id="contacting">
-  <div>
-    <img src="/assets/hero/logo.svg" alt="Logo" class="logoImg"/>
-  </div>
+  <img src="/assets/hero/logo.svg" alt="Logo" class="logoImg"/>
   <div>
     <label for="fName" id="fNameL">First Name</label>
     <input
@@ -28,6 +26,8 @@
       id="email"
       required
     />
+    <p class="errorPara">Please enter a valid E-mail address</p>
+    <p class="suggestionPara">Did you mean <span class="suggested"></span></p>
   </div>
   <div>
     <label for="message">Message</label>

@@ -7,39 +7,55 @@
 // TODO: Feedback to user in case of wrong input or invalid
 // TODO: Redirection when an email is sent? Why though?
 
-// validating contact input
+// validating Email input
 const reg = {
-  name: /^[a-z-_ ]{1,20}$/i,
   email: /^([^@]+)@(.+)\.(.+)$/i, //And send a confirmation Email anyways
-  message: /^[\w\s\-()+]{1,1000}$/,
 };
-
+var errorPara = document.querySelector(".errorPara");
+var suggestionPara = document.querySelector(".suggestionPara");
+var suggestedPara = suggestionPara.querySelector(".suggested");
 const validate = (field, regEx) => {
-  if (regEx == undefined) regEx = reg.name;
-  if (regEx.test(field.value)) {
-    field.style.borderColor = "green";
-  } else {
-    field.style.borderColor = "red";
-  }
-  if (field.name == "email") {
-    Mailcheck.run({
-      email: field.value,
-      suggested: function (suggestion) {
-        console.log(`Do you mean ${suggestion.full}?`);
-        field.style.borderColor = "red";
-      },
-      empty: function () {
-        console.log(`You are all set!`);
-        field.style.borderColor = "green";
-      },
-    });
-  }
-};
-const inputs = document.querySelectorAll("input");
-inputs.forEach((input) => {
-  input.addEventListener("blur", () => {
-    validate(input, reg[input.name]);
+  errorPara = document.querySelector(".errorPara");
+  suggestionPara = document.querySelector(".suggestionPara");
+  suggestedPara = suggestionPara.querySelector(".suggested");
+  Mailcheck.run({
+    // If there is a suggestion
+    email: field.value,
+    suggested: function (suggestion) {
+      // Show the suggestion and change border color
+      suggestedPara.innerHTML = `${suggestion.full}?`;
+      suggestionPara.style.display = "block";
+      field.style.border = "4px solid #b2001f";
+      errorPara.style.display = "none";
+      // Clicking the suggestion solves the problem
+      suggestedPara.addEventListener("click", () => {
+        errorPara.style.display = "none";
+        field.value = suggestion.full;
+        suggestionPara.style.display = "none";
+        field.style.border = "2px solid var(--tertiary-clr)";
+      });
+    },
+    empty: function () {
+      //If there are no suggestions, check the RegEx
+      suggestionPara.style.display = "none";
+      if (regEx.test(field.value)) {
+        // If the Email is valid
+        errorPara.style.display = "none";
+        field.style.border = "2px solid var(--tertiary-clr;";
+      } else {
+        errorPara.style.display = "block";
+        field.style.border = "4px solid #b2001f";
+      }
+    },
   });
+};
+const emailInput = document.querySelector(`input[type="email"]`);
+emailInput.addEventListener("blur", () => {
+  if (emailInput.value != "") validate(emailInput, reg.email);
+  else {
+    errorPara.style.display = "none";
+    suggestionPara.style.display = "none";
+  }
 });
 
 //themes

@@ -53,6 +53,10 @@ textarea,
 label {
   font-size: clamp(1.4rem, 1.5vw, 2.5rem);
 }
+input,
+textarea {
+  font-size: clamp(1.2rem, 1.3vw, 2.2rem);
+}
 /* Utility Classes */
 .bold {
   font-weight: bold;
@@ -264,18 +268,40 @@ main {
   flex-direction: column;
   margin-bottom: 2rem;
 }
+.suggestionPara,
+.errorPara {
+  display: none;
+  font-size: 1.2em;
+}
+.errorPara {
+  color: red;
+}
+.suggestionPara {
+  text-align: right;
+}
+.suggested {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.suggested:hover {
+  color: #bbb;
+}
 input,
 textarea {
   font-family: "Bodoni Moda", serif;
   color: white;
   background-color: var(--secondary-clr);
+  border: 2px solid var(--tertiary-clr);
   margin-top: 0.3rem;
   padding: 0.5rem;
 }
 input:focus,
 textarea:focus {
-  border: 2px solid var(--secondary-clr);
+  border-color: var(--secondary-clr);
   background-color: var(--accent-clr);
+}
+#email {
+  margin-bottom: 0.3rem;
 }
 #submit {
   margin-top: 5rem;
@@ -287,14 +313,14 @@ textarea:focus {
   flex-direction: column;
   text-align: left;
 }
-#contact span {
+#contact .separator {
   display: block;
   text-align: center;
   position: relative;
   margin-bottom: 1rem;
   font-size: 1.8em;
 }
-#contact span::after {
+#contact .separator::after {
   content: "";
   position: absolute;
   height: 2px;
@@ -303,7 +329,7 @@ textarea:focus {
   top: 50%;
   right: 0;
 }
-#contact span::before {
+#contact .separator::before {
   content: "";
   position: absolute;
   height: 2px;
