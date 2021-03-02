@@ -1,6 +1,5 @@
 const mongoose = require("mongoose");
 const Contact = require("../models/contactModel");
-const nodemailer = require("nodemailer");
 const { body, validationResult } = require("express-validator");
 require("dotenv/config");
 
@@ -50,7 +49,7 @@ module.exports = {
         message,
       });
       console.log("Contact created successfully: ", email);
-      sendEmail(req);
+      res.redirect("/contact/success"); // Show a page indicating success
     } catch (e) {
       console.log("Couldn't add contact\n", e);
     }
@@ -63,34 +62,34 @@ module.exports = {
     }
   },
 };
-function sendEmail(req) {
-  const { fname, lname, email, message } = req.body;
-  // Instantiate the SMTP server
-  const smtpTrans = nodemailer.createTransport({
-    host: "smtp.gmail.com",
-    port: 465,
-    secure: true,
-    auth: {
-      user: process.env.gmailUser,
-      pass: process.env.gmailPass,
-    },
-  });
-
-  // Specify what the email will look like
-  const mailOpts = {
-    from: "Your sender info here", // This is ignored by Gmail
-    to: process.env.gmailUser,
-    subject: "New message from contact form at bavlifyweb.com",
-    text: `${fname} ${lname} (${email}) says: ${message}`,
-  };
-
-  // Attempt to send the email
-  smtpTrans.sendMail(mailOpts, (error, response) => {
-    if (error) {
-      console.log("Email couldn't be sent\n", error);
-      res.render("mainViews/index.ejs"); // Show a page indicating failure
-    } else {
-      res.redirect("/contact/success"); // Show a page indicating success
-    }
-  });
-}
+// function sendEmail(req) {
+//   const { fname, lname, email, message } = req.body;
+//   // Instantiate the SMTP server
+//   const smtpTrans = nodemailer.createTransport({
+//     host: "smtp.gmail.com",
+//     port: 465,
+//     secure: true,
+//     auth: {
+//       user: process.env.gmailUser,
+//       pass: process.env.gmailPass,
+//     },
+//   });
+//
+//   // Specify what the email will look like
+//   const mailOpts = {
+//     from: "Your sender info here", // This is ignored by Gmail
+//     to: process.env.gmailUser,
+//     subject: "New message from contact form at bavlifyweb.com",
+//     text: `${fname} ${lname} (${email}) says: ${message}`,
+//   };
+//
+//   // Attempt to send the email
+//   smtpTrans.sendMail(mailOpts, (error, response) => {
+//     if (error) {
+//       console.log("Email couldn't be sent\n", error);
+//       res.render("mainViews/index.ejs"); // Show a page indicating failure
+//     } else {
+//       res.redirect("/contact/success"); // Show a page indicating success
+//     }
+//   });
+// }

@@ -1,10 +1,7 @@
-// TODO: Error Messages for form
 // TODO: Finish slider and customize it
 // TODO: Fix images
 // TODO: Check the halloween theme
 // TODO: Add new themes (Valentine)
-// TODO: change border color of input on focus and confirmation
-// TODO: Feedback to user in case of wrong input or invalid
 // TODO: Redirection when an email is sent? Why though?
 
 // validating Email input
