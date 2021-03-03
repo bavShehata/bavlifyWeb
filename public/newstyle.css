@@ -72,6 +72,13 @@ textarea {
 .btn {
   padding: 1rem 3rem;
   cursor: pointer;
+  background-color: var(--tertiary-clr);
+  color: var(--white-clr);
+}
+.btn:hover,
+.btn:focus {
+  background-color: var(--secondary-clr);
+  color: white;
 }
 .container {
   margin: 0 5vw;
@@ -142,19 +149,14 @@ nav a {
   display: flex;
   flex-direction: column;
 }
-.cta .btn:nth-child(1) {
-  background-color: var(--accent-clr);
-}
-.cta .btn:nth-child(1):hover,
-.cta .btn:nth-child(1):focus {
-  background-color: var(--secondary-clr);
-  color: white;
-}
+
 .cta .btn:nth-child(2) {
   border: 1px solid #888;
+  background-color: transparent;
 }
 .cta .btn:nth-child(2):hover {
   border: 1px solid #555;
+  background-color: transparent;
 }
 .grid {
   margin-top: 5rem;
@@ -266,7 +268,7 @@ main {
 #contact div {
   display: flex;
   flex-direction: column;
-  margin-bottom: 2rem;
+  padding-bottom: 2rem;
 }
 .suggestionPara,
 .errorPara {
@@ -305,8 +307,33 @@ textarea:focus {
 }
 #submit {
   margin-top: 5rem;
-  background-color: var(--tertiary-clr);
+}
+.contactConfirmation {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 3;
+  background-color: rgba(0, 0, 0, 07);
+}
+.contactConfirmation div {
+  position: relative;
+  margin: 50vh auto 0 auto;
+  width: min(90vw, 500px);
+  transform: translateY(-50%);
+  background-color: var(--main-clr);
   color: var(--white-clr);
+  border-radius: 10px;
+  padding: 3rem;
+}
+.contactConfirmation i {
+  font-size: min(20rem, 30vh);
+  color: var(--accent-clr);
+}
+.contactConfirmation .btn {
+  margin: 1rem 0;
+  border: none;
 }
 .socialMedia {
   display: flex;
@@ -350,4 +377,5 @@ textarea:focus {
 }
 footer {
   flex-shrink: 0;
+  padding: 2rem;
 }

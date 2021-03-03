@@ -7,7 +7,7 @@ module.exports = {
     try {
       const portfolios = await Portfolio.find();
       console.log("Number of portfolios: ", portfolios.length);
-      res.render("mainViews/index.ejs", { portfolios });
+      res.render("mainViews/index.ejs", { portfolios, contact: 0 });
     } catch (e) {
       console.log("Couldn't show index page\n", e);
     }

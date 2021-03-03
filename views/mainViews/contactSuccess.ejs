@@ -3,22 +3,22 @@
     <%- include("../partials/head.ejs") %>
   </head>
   <body>
-    <header>
-      <%- include("../partials/header.ejs") %>
-    </header>
-    <main>
-      <button class="btn" id="theme">Halloween!</button>
-      <a href="" class="btn" id="scrollTop"
-      ><i class="fas fa-arrow-alt-circle-up fa-2x"></i
-      ></a>
-      <section class="container contact">
-        <h2>
-          We recieved your message, thank you very much and kindly wait for our
-          reply.
-        </h2>
-        <a href="/" class="btn back">Back to Homepage</a>
-      </section>
-    </main>
+    <div id="hero">
+      <div class="container">
+        <header>
+          <%- include("../partials/header.ejs") %>
+        </header>
+        <main>
+          <section class="container contact">
+            <p>
+              We recieved your message, thank you very much and kindly wait for our
+              reply.
+            </p>
+            <a href="/" class="btn back">Back to Homepage</a>
+          </section>
+        </main>
+      </div>
+    </div>
     <footer>
       <%- include("../partials/footer.ejs") %>
     </footer>

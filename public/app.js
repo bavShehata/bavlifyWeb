@@ -3,6 +3,9 @@
 // TODO: Check the halloween theme
 // TODO: Add new themes (Valentine)
 // TODO: Redirection when an email is sent? Why though?
+// TODO: Disable scrolling when the pop up appear
+// TODO: close the popup by clicking outside
+// TODO: display none until contact is added successfully
 
 // validating Email input
 const reg = {
