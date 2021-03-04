@@ -2,11 +2,28 @@
 // TODO: Fix images
 // TODO: Check the halloween theme
 // TODO: Add new themes (Valentine)
-// TODO: Redirection when an email is sent? Why though?
-// TODO: Disable scrolling when the pop up appear
-// TODO: close the popup by clicking outside
-// TODO: display none until contact is added successfully
 
+// Closing popup
+if (contact) {
+  const popup = document.querySelector(".contactConfirmation");
+  const popupWindow = popup.querySelector("div");
+  const popupBtn = popup.querySelector(".btn");
+  // If contact creation was successful
+  // Stop scrolling
+  document.body.style.overflowY = "hidden";
+  // Close popup if clicked outside the window
+  popup.addEventListener("click", () => {
+    if (!popupWindow.contains(event.target)) {
+      popup.style.display = "none";
+      document.body.style.overflowY = "auto";
+    }
+  });
+  // Close popup if clicked on the button
+  popupBtn.addEventListener("click", () => {
+    popup.style.display = "none";
+    document.body.style.overflowY = "auto";
+  });
+}
 // validating Email input
 const reg = {
   email: /^([^@]+)@(.+)\.(.+)$/i, //And send a confirmation Email anyways
