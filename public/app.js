@@ -2,6 +2,7 @@
 // TODO: Fix images
 // TODO: Check the halloween theme
 // TODO: Add new themes (Valentine)
+// TODO: styling my About, background color, photo, etc...
 
 // Closing popup
 if (contact) {

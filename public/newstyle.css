@@ -242,6 +242,11 @@ nav a {
 main {
   flex: 1 0 auto;
 }
+#about .container {
+  width: max(60ch, 90vw);
+  margin: 0 auto;
+  text-align: left;
+}
 #contact {
   color: var(--white-clr);
   background-color: black;
