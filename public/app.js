@@ -2,7 +2,7 @@
 // TODO: Fix images
 // TODO: Check the halloween theme
 // TODO: Add new themes (Valentine)
-// TODO: styling my About, background color, photo, etc...
+// TODO: choosing best about photo, maybe a vector art, or an icon/avatar? and change its position according screen size?
 
 // Closing popup
 if (contact) {

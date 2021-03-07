@@ -27,6 +27,7 @@ body {
   font-family: "Bodoni Moda", serif;
   color: var(--white-clr);
   background-color: var(--main-clr);
+  line-height: 1.5;
 }
 a {
   color: var(--white-clr);
@@ -246,6 +247,19 @@ main {
   width: max(60ch, 90vw);
   margin: 0 auto;
   text-align: left;
+  padding: 5rem 0;
+}
+#about h3{
+  margin: 3rem 0 1rem 0;
+}
+#about img{
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);  
+  margin: 1rem 0 3rem 0;
+}
+#about a{
+  text-decoration: underline;
 }
 #contact {
   color: var(--white-clr);
