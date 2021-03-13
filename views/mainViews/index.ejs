@@ -5,35 +5,26 @@
   <body>
     <div id="hero">
       <div class="container">
-        <header>
-          <%- include("../partials/header.ejs") %>
-        </header>
-        <section>
-          <%- include("../partials/hero.ejs") %>
-        </section>
+        <header><%- include("../partials/header.ejs") %></header>
+        <section><%- include("../partials/hero.ejs") %></section>
       </div>
     </div>
     <main>
       <section id="portfolio">
-         <%- include("../partials/portfolio.ejs") %>
+        <%- include("../partials/portfolio.ejs") %>
       </section>
-      <section id="about">
-        <%- include("../partials/about.ejs") %>
-      </section>
+      <section id="about"><%- include("../partials/about.ejs") %></section>
       <section id="contact">
-        <div class="container">
-          <%- include("../partials/contact.ejs") %>
-        </div>
+        <div class="container"><%- include("../partials/contact.ejs") %></div>
       </section>
     </main>
-    <footer>
-      <%- include("../partials/footer.ejs") %>
-    </footer>
+    <footer><%- include("../partials/footer.ejs") %></footer>
     <script src="/app.js"></script>
     <script
       src="https://kit.fontawesome.com/6751b3949e.js"
       crossorigin="anonymous"
     ></script>
+
     <script src="/scripts/mailcheck.min.js"></script>
   </body>
 </html>

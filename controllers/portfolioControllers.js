@@ -1,13 +1,18 @@
-const mongoose = require("mongoose");
-const Portfolio = require("../models/portfolioModel");
-
+const mongoose = require('mongoose');
+const Portfolio = require('../models/portfolioModel');
+const uri = 'http://localhost:3000/portfolios';
+const axios = require('axios');
 module.exports = {
   //Show index page
   getIndex: async (req, res) => {
     try {
-      const portfolios = await Portfolio.find();
-      console.log("Number of portfolios: ", portfolios.length);
-      res.render("mainViews/index.ejs", { portfolios, contact: 0 });
+      // The Mongo way
+      // const portfolios = await Portfolio.find();
+      // The JSON-server way
+      const result = await axios.get(uri);
+      const portfolios = result.data;
+      console.log('Number of portfolios: ', portfolios.length);
+      res.render('mainViews/index.ejs', { portfolios, contact: 0 });
     } catch (e) {
       console.log("Couldn't show index page\n", e);
     }
@@ -17,8 +22,8 @@ module.exports = {
     try {
       // const portfolios = await Portfolio.find();
       portfolios = [];
-      console.log("Number of portfolios: ", portfolios.length);
-      res.render("mainViews/index.ejs", { portfolios });
+      console.log('Number of portfolios: ', portfolios.length);
+      res.render('mainViews/index.ejs', { portfolios });
     } catch (e) {
       console.log("Couldn't show index page\n", e);
     }
@@ -27,7 +32,7 @@ module.exports = {
   deletePortfolios: async (req, res) => {
     try {
       await Portfolio.deleteMany();
-      console.log("All portfolios deleted successfully");
+      console.log('All portfolios deleted successfully');
     } catch (e) {
       console.log("Couldn't delete all portfolios\n", e);
     }
@@ -35,7 +40,7 @@ module.exports = {
   // Portfolio form page
   portfolioForm: async (req, res) => {
     try {
-      res.render("mainViews/portfolioOperations.ejs");
+      res.render('mainViews/portfolioOperations.ejs');
     } catch (e) {
       console.log("Couldn't delete all portfolios\n", e);
     }
@@ -44,14 +49,14 @@ module.exports = {
   addPortfolio: async (req, res) => {
     const { title, desktopURL, mobileURL, websiteURL } = req.body;
     try {
-      console.log("obj");
+      console.log('obj');
       const portfolio = await Portfolio.create({
         title,
         desktopURL,
         mobileURL,
         websiteURL,
       });
-      console.log("Portfolio created successfully: ", title);
+      console.log('Portfolio created successfully: ', title);
     } catch (e) {
       console.log("Couldn't create portfolio\n", e);
     }
@@ -61,7 +66,7 @@ module.exports = {
     const { mobileURL } = req.body;
     try {
       const deletedPorfolio = await Portfolio.findOneAndDelete({ mobileURL });
-      console.log("Portfolio deleted successfully", deletePortfolio.title);
+      console.log('Portfolio deleted successfully', deletePortfolio.title);
     } catch (e) {
       console.log("Couldn't delete portfolio\n", e);
     }

@@ -249,16 +249,16 @@ main {
   text-align: left;
   padding: 5rem 0;
 }
-#about h3{
+#about h3 {
   margin: 3rem 0 1rem 0;
 }
-#about img{
+#about img {
   position: relative;
   left: 50%;
-  transform: translateX(-50%);  
+  transform: translateX(-50%);
   margin: 1rem 0 3rem 0;
 }
-#about a{
+#about a {
   text-decoration: underline;
 }
 #contact {
