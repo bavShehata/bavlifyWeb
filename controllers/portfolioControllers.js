@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const Portfolio = require('../models/portfolioModel');
-const uri = 'http://localhost:3000/portfolios';
+var uri = 'http://localhost:3000/portfolios';
 const axios = require('axios');
 module.exports = {
   //Show index page
@@ -9,6 +9,7 @@ module.exports = {
       // The Mongo way
       // const portfolios = await Portfolio.find();
       // The JSON-server way
+      uri = 'http://localhost:3000/portfolios';
       const result = await axios.get(uri);
       const portfolios = result.data;
       console.log('Number of portfolios: ', portfolios.length);
@@ -17,21 +18,14 @@ module.exports = {
       console.log("Couldn't show index page\n", e);
     }
   },
-  //Show all portfolios
-  getPortfolios: async (req, res) => {
-    try {
-      // const portfolios = await Portfolio.find();
-      portfolios = [];
-      console.log('Number of portfolios: ', portfolios.length);
-      res.render('mainViews/index.ejs', { portfolios });
-    } catch (e) {
-      console.log("Couldn't show index page\n", e);
-    }
-  },
   // Delete all portfolios
   deletePortfolios: async (req, res) => {
     try {
-      await Portfolio.deleteMany();
+      // Mongo way
+      // await Portfolio.deleteMany();
+      // JSON Way
+      uri = 'http://localhost:3000/portfolios';
+      await axios.delete(uri);
       console.log('All portfolios deleted successfully');
     } catch (e) {
       console.log("Couldn't delete all portfolios\n", e);
@@ -49,26 +43,28 @@ module.exports = {
   addPortfolio: async (req, res) => {
     const { title, desktopURL, mobileURL, websiteURL } = req.body;
     try {
-      console.log('obj');
-      const portfolio = await Portfolio.create({
+      // Mongo way
+      // const portfolio = await Portfolio.create({
+      //   title,
+      //   desktopURL,
+      //   mobileURL,
+      //   websiteURL,
+      // });
+      // JSON way
+      uri = 'http://localhost:3000/portfolios';
+      const portfolio = {
         title,
         desktopURL,
         mobileURL,
         websiteURL,
+      };
+      portfolio = JSON.stringify(portfolio);
+      await axios.post(uri, portfolio, {
+        headers: { 'Content-Type': 'application/json' },
       });
       console.log('Portfolio created successfully: ', title);
     } catch (e) {
       console.log("Couldn't create portfolio\n", e);
-    }
-  },
-  // Remove a portfolio by mobile link
-  removePortfolio: async (req, res) => {
-    const { mobileURL } = req.body;
-    try {
-      const deletedPorfolio = await Portfolio.findOneAndDelete({ mobileURL });
-      console.log('Portfolio deleted successfully', deletePortfolio.title);
-    } catch (e) {
-      console.log("Couldn't delete portfolio\n", e);
     }
   },
 };
