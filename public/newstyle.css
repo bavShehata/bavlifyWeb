@@ -24,13 +24,14 @@ body {
   display: flex;
   flex-direction: column;
   height: 100%;
-  font-family: "Bodoni Moda", serif;
+  font-family: 'Bodoni Moda', serif;
   color: var(--white-clr);
   background-color: var(--main-clr);
   line-height: 1.5;
 }
 a {
   color: var(--white-clr);
+  cursor: pointer;
 }
 a:hover,
 a:focus {
@@ -243,6 +244,55 @@ nav a {
 main {
   flex: 1 0 auto;
 }
+#portfolio {
+  padding: 2rem 0;
+}
+#portfolio h1 {
+  margin-bottom: 1rem;
+}
+.slider {
+  height: 500px;
+  background-color: blue;
+  position: relative;
+}
+.websiteTitle {
+  display: block;
+  margin-top: 1rem;
+
+  margin-bottom: 1rem;
+}
+.desktop {
+  width: 75%;
+  height: 500px;
+}
+.mobile {
+  width: 25%;
+  float: right;
+  height: 500px;
+  border: 5px solid #888;
+}
+.prev,
+.next {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  height: 100%;
+  width: 5%;
+  border-radius: 5px;
+}
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.prev {
+  left: 0;
+}
+.next {
+  right: 0;
+}
 #about .container {
   width: max(60ch, 90vw);
   margin: 0 auto;
@@ -309,7 +359,7 @@ main {
 }
 input,
 textarea {
-  font-family: "Bodoni Moda", serif;
+  font-family: 'Bodoni Moda', serif;
   color: white;
   background-color: var(--secondary-clr);
   border: 2px solid var(--tertiary-clr);
@@ -367,7 +417,7 @@ textarea:focus {
   font-size: 1.8em;
 }
 #contact .separator::after {
-  content: "";
+  content: '';
   position: absolute;
   height: 2px;
   width: 35vw;
@@ -376,7 +426,7 @@ textarea:focus {
   right: 0;
 }
 #contact .separator::before {
-  content: "";
+  content: '';
   position: absolute;
   height: 2px;
   width: 35vw;

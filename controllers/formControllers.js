@@ -1,8 +1,9 @@
-const mongoose = require("mongoose");
-const Contact = require("../models/contactModel");
-const Portfolio = require("../models/portfolioModel");
-const { body, validationResult } = require("express-validator");
-require("dotenv/config");
+const mongoose = require('mongoose');
+const Contact = require('../models/contactModel');
+const Portfolio = require('../models/portfolioModel');
+const { body, validationResult } = require('express-validator');
+const axios = require('axios');
+require('dotenv/config');
 
 const reg = {
   name: /^[a-z-_]{1,20}$/i,
@@ -11,6 +12,7 @@ const reg = {
 };
 module.exports = {
   validateContact: (req, res, next) => {
+    // trim first and last names
     const { fname, lname, email, message } = req.body;
     if (
       reg.name.test(fname) &&
@@ -22,15 +24,21 @@ module.exports = {
       next();
       return;
     }
+    // console.log(
+    //   reg.name.test(fname),
+    //   reg.name.test(lname),
+    //   reg.email.test(email),
+    //   reg.message.test(message)
+    // );
     req.validInput = false;
     next();
     return;
   },
   sanitizeContact: [
-    body("fname").escape().trim(),
-    body("lname").escape().trim(),
-    body("email").trim().normalizeEmail().escape(),
-    body("message").trim().escape(),
+    body('fname').escape().trim(),
+    body('lname').escape().trim(),
+    body('email').trim().normalizeEmail().escape(),
+    body('message').trim().escape(),
   ],
   postContact: async (req, res) => {
     try {
@@ -38,29 +46,35 @@ module.exports = {
       if (!req.validInput) {
         // Input error not validated
 
-        console.log("COULD NOT BE VALIDATED!!!", message);
+        console.log('COULD NOT BE VALIDATED!!!', message);
         return;
       }
-      console.log("All input is valid");
+      console.log('All input is valid');
       // Create a contact in the database
-      const contact = await Contact.create({
+      var contact = await Contact.create({
         fname,
         lname,
         email,
         message,
       });
-      console.log("Contact created successfully: ", email);
-      const portfolios = await Portfolio.find();
-      console.log("Number of portfolios: ", portfolios.length);
-      res.render("mainViews/index.ejs", { portfolios, contact: 1 });
-      // res.redirect("/contact/success"); // Show a page indicating success
+      // JSON way
+      console.log('Contact created successfully: ', email);
+      // The mongo way
+      // const portfolios = await Portfolio.find();
+      // The JSON-server way
+      // Email is only sent through mobile data, not uni wifi??????
+      uri = 'http://localhost:3000/portfolios';
+      const result = await axios.get(uri);
+      const portfolios = result.data;
+      console.log('Number of portfolios: ', portfolios.length); // The JSON-server way
+      res.render('mainViews/index.ejs', { portfolios, contactSuccess: 1 });
     } catch (e) {
       console.log("Couldn't add contact\n", e);
     }
   },
   getContactSuccess: async (req, res) => {
     try {
-      res.render("mainViews/contactSuccess.ejs");
+      res.render('mainViews/contactSuccess.ejs');
     } catch (e) {
       console.log("Couldn't show contact success page\n", e);
     }

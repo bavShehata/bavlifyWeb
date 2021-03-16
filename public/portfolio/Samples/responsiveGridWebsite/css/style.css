@@ -35,7 +35,7 @@ h3 {
   top: 0;
   height: 100vh;
   width: 100%;
-  background: url("../img/showcase.png") no-repeat center;
+  background: url('../img/showcase.png') no-repeat center;
   background-size: cover;
   opacity: 0.4;
   z-index: -1;
@@ -165,5 +165,8 @@ footer a {
   #contact-about .grid-container {
     display: flex;
     flex-direction: column;
+  }
+  header p {
+    display: none;
   }
 }

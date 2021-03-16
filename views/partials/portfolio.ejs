@@ -1,20 +1,32 @@
-     <h1>Portfolio</h1>
-       <div class="slideshow-container">
-         <div class="container">
-          <!-- Full-width images with number and caption text -->
-          <% var i = 0;
-          portfolios.forEach((portfolio) => {
-            i++ %>
-            <div class="mySlides fade">
-              <div class="numbertext"><%=i%> / <%=portfolios.length%></div>
-              <img src="<%=portfolio.desktopURL%>" style="width:75%; height: 500px" alt="<%=portfolio.title%>">
-              <img src="<%=portfolio.mobileURL%>" style="width:25%; float:right; height: 500px" alt="<%=portfolio.title%>">
-              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-              <a href="<%=portfolio.websiteURL%>"><%=portfolio.title%></a>
-              <a class="next" onclick="plusSlides(1)">&#10095;</a>
-            </div>
-          <%}); %>
-          <!-- Next and previous buttons -->
-
-        </div>
+<h1>Portfolio</h1>
+<div class="slideshow-container">
+  <div class="container">
+    <!-- Full-width images with number and caption text -->
+    <% var i = 0; portfolios.forEach((portfolio) => { i++ %>
+    <div class="mySlides fade">
+      <div class="slider">
+        <a href="<%=portfolio.websiteURL%>">
+          <img
+            src="<%=portfolio.desktopURL%>"
+            alt="<%=portfolio.title%>"
+            class="desktop"
+          />
+        </a>
+        <a href="<%=portfolio.websiteURL%>">
+          <img
+            src="<%=portfolio.mobileURL%>"
+            alt="<%=portfolio.title%>"
+            class="mobile"
+          />
+        </a>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
       </div>
+      <a href="<%=portfolio.websiteURL%>" class="websiteTitle"
+        ><h2><%=portfolio.title%></h2></a
+      >
+    </div>
+    <%}); %>
+    <!-- Next and previous buttons -->
+  </div>
+</div>

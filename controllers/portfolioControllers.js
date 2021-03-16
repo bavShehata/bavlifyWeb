@@ -13,7 +13,7 @@ module.exports = {
       const result = await axios.get(uri);
       const portfolios = result.data;
       console.log('Number of portfolios: ', portfolios.length);
-      res.render('mainViews/index.ejs', { portfolios, contact: 0 });
+      res.render('mainViews/index.ejs', { portfolios, contactSuccess: 0 });
     } catch (e) {
       console.log("Couldn't show index page\n", e);
     }
@@ -22,7 +22,7 @@ module.exports = {
   deletePortfolios: async (req, res) => {
     try {
       // Mongo way
-      // await Portfolio.deleteMany();
+      await Portfolio.deleteMany();
       // JSON Way
       uri = 'http://localhost:3000/portfolios';
       await axios.delete(uri);
@@ -44,15 +44,15 @@ module.exports = {
     const { title, desktopURL, mobileURL, websiteURL } = req.body;
     try {
       // Mongo way
-      // const portfolio = await Portfolio.create({
-      //   title,
-      //   desktopURL,
-      //   mobileURL,
-      //   websiteURL,
-      // });
+      var portfolio = await Portfolio.create({
+        title,
+        desktopURL,
+        mobileURL,
+        websiteURL,
+      });
       // JSON way
       uri = 'http://localhost:3000/portfolios';
-      const portfolio = {
+      portfolio = {
         title,
         desktopURL,
         mobileURL,

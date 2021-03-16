@@ -1,0 +1,300 @@
+{
+  "portfolios": [
+    {
+      "id": 1,
+      "title": "iTunes Clone",
+      "desktopURL": "\\portfolio\\Samples\\iTunesClone\\desktopTunes.png",
+      "mobileURL": "\\portfolio\\Samples\\iTunesClone\\mobileTunes.png",
+      "websiteURL": "\\portfolio\\Samples\\iTunesClone\\index.html"
+    },
+    {
+      "id": 2,
+      "title": "Parallax Website",
+      "desktopURL": "\\portfolio\\Samples\\parallaxWebsite\\adesktopParallax.png",
+      "mobileURL": "\\portfolio\\Samples\\parallaxWebsite\\amobileParallax.png",
+      "websiteURL": "\\portfolio\\Samples\\parallaxWebsite\\index.html"
+    },
+    {
+      "id": 3,
+      "title": "Photography Site",
+      "desktopURL": "\\portfolio\\Samples\\photographySite\\desktopPhotography.png",
+      "mobileURL": "\\portfolio\\Samples\\photographySite\\mobilePhotography.png",
+      "websiteURL": "\\portfolio\\Samples\\photographySite\\index.html"
+    },
+    {
+      "id": 4,
+      "title": "Pluralsight Clone",
+      "desktopURL": "\\portfolio\\Samples\\pluralsightClone\\desktopPlural.png",
+      "mobileURL": "\\portfolio\\Samples\\pluralsightClone\\mobilePlural.png",
+      "websiteURL": "\\portfolio\\Samples\\pluralsightClone\\index.html"
+    },
+    {
+      "id": 5,
+      "title": "ACME Clone",
+      "desktopURL": "\\portfolio\\Samples\\responsiveGridWebsite\\desktopAcme.png",
+      "mobileURL": "\\portfolio\\Samples\\responsiveGridWebsite\\amobileAcme.png",
+      "websiteURL": "\\portfolio\\Samples\\responsiveGridWebsite\\index.html"
+    },
+    {
+      "id": 6,
+      "title": "Blur Landing",
+      "desktopURL": "\\portfolio\\Samples\\blurLanding\\desktopBlur.png",
+      "mobileURL": "\\portfolio\\Samples\\blurLanding\\mobileBlur.png",
+      "websiteURL": "\\portfolio\\Samples\\blurLanding\\index.html"
+    }
+  ],
+  "contact": [
+    {
+      "id": 1,
+      "fname": "Bavly",
+      "lname": "Shehata",
+      "email": "bavshehata@gmail.com",
+      "message": "Hello there guys"
+    },
+    {
+      "fname": "I",
+      "lname": "Am",
+      "email": "someone@gmail.com",
+      "message": "so how  asdfasd \r\n\r\nasdfas \r\nyou? &lt;&lt;&lt;321&gt; &lt;@?!_=",
+      "id": 2
+    },
+    {
+      "fname": "I",
+      "lname": "Am",
+      "email": "someone@gmail.com",
+      "message": "so how  asdfasd \r\n\r\nasdfas \r\nyou? &lt;&lt;&lt;321&gt; &lt;@?!_=",
+      "id": 3
+    },
+    {
+      "fname": "I",
+      "lname": "Am",
+      "email": "someone@gmail.com",
+      "message": "so how  asdfasd \r\n\r\nasdfas \r\nyou? &lt;&lt;&lt;321&gt; &lt;@?!_=",
+      "id": 4
+    },
+    {
+      "fname": "I",
+      "lname": "Am",
+      "email": "someon@gmail.co",
+      "message": "so how  asdfasd \r\n\r\nasdfas \r\nyou? &lt;&lt;&lt;321&gt; &lt;@?!_=",
+      "id": 5
+    },
+    {
+      "fname": "asdf",
+      "lname": "aswds",
+      "email": "asfsda@sdafam.com",
+      "message": "asdfasdfasdf asdf",
+      "id": 6
+    },
+    {
+      "fname": "asdf",
+      "lname": "aswds",
+      "email": "asfsda@sdafam.com",
+      "message": "asdfasdfasdf asdf",
+      "id": 7
+    },
+    {
+      "fname": "asdf",
+      "lname": "aswds",
+      "email": "asfsda@sdafam.com",
+      "message": "asdfasdfasdf asdf",
+      "id": 8
+    },
+    {
+      "fname": "asdf",
+      "lname": "aswds",
+      "email": "asfsda@sdafam.com",
+      "message": "asdfasdfasdf asdf",
+      "id": 9
+    },
+    {
+      "fname": "asdf",
+      "lname": "aswds",
+      "email": "asfsda@sdafam.com",
+      "message": "asdfasdfasdf asdf",
+      "id": 10
+    },
+    {
+      "fname": "asdf",
+      "lname": "aswds",
+      "email": "asfsda@sdafam.com",
+      "message": "asdfasdfasdf asdf",
+      "id": 11
+    },
+    {
+      "fname": "asfas",
+      "lname": "asdfasdf",
+      "email": "asdfasdf@asdas.co",
+      "message": "asdfasdf",
+      "id": 12
+    },
+    {
+      "fname": "asfas",
+      "lname": "asdfasdf",
+      "email": "asdfasdf@asdas.co",
+      "message": "asdfasdf",
+      "id": 13
+    },
+    {
+      "fname": "asfas",
+      "lname": "asdfasdf",
+      "email": "asdfasdf@asdas.co",
+      "message": "asdfasdf",
+      "id": 14
+    },
+    {
+      "fname": "asfas",
+      "lname": "asdfasdf",
+      "email": "asdfasdf@asdas.co",
+      "message": "asdfasdf",
+      "id": 15
+    },
+    {
+      "fname": "asfas",
+      "lname": "asdfasdf",
+      "email": "asdfasdf@asdas.co",
+      "message": "asdfasdf",
+      "id": 16
+    },
+    {
+      "fname": "asfas",
+      "lname": "asdfasdf",
+      "email": "asdfasdf@asdas.co",
+      "message": "asdfasdf",
+      "id": 17
+    },
+    {
+      "fname": "asdfasd",
+      "lname": "fdsaf",
+      "email": "fsdafasd@adsfasd.com",
+      "message": "asdfasf",
+      "id": 18
+    },
+    {
+      "fname": "asdfasd",
+      "lname": "fdsaf",
+      "email": "fsdafasd@adsfasd.com",
+      "message": "asdfasf",
+      "id": 19
+    },
+    {
+      "fname": "asdfasd",
+      "lname": "fdsaf",
+      "email": "fsdafasd@adsfasd.com",
+      "message": "asdfasf",
+      "id": 20
+    },
+    {
+      "fname": "asdfasd",
+      "lname": "fdsaf",
+      "email": "fsdafasd@adsfasd.com",
+      "message": "asdfasf",
+      "id": 21
+    },
+    {
+      "fname": "asdfasd",
+      "lname": "fdsaf",
+      "email": "fsdafasd@adsfasd.com",
+      "message": "asdfasf",
+      "id": 22
+    },
+    {
+      "fname": "asdfasd",
+      "lname": "fdsaf",
+      "email": "fsdafasd@adsfasd.com",
+      "message": "asdfasf",
+      "id": 23
+    },
+    {
+      "fname": "asdfasd",
+      "lname": "fdsaf",
+      "email": "fsdafasd@adsfasd.com",
+      "message": "asdfasf",
+      "id": 24
+    },
+    {
+      "fname": "asdfasd",
+      "lname": "fdsaf",
+      "email": "fsdafasd@adsfasd.com",
+      "message": "asdfasf",
+      "id": 25
+    },
+    {
+      "fname": "asdfasd",
+      "lname": "fdsaf",
+      "email": "fsdafasd@adsfasd.com",
+      "message": "asdfasf",
+      "id": 26
+    },
+    {
+      "fname": "asdasfq",
+      "lname": "asdasf",
+      "email": "qwdqw@gmail.com",
+      "message": "asfwqevwe",
+      "id": 27
+    },
+    {
+      "fname": "asdasfq",
+      "lname": "asdasf",
+      "email": "qwdqw@gmail.com",
+      "message": "asfwqevwe",
+      "id": 28
+    },
+    {
+      "fname": "asdasfq",
+      "lname": "asdasf",
+      "email": "qwdqw@gmail.com",
+      "message": "asfwqevwe",
+      "id": 29
+    },
+    {
+      "fname": "asdasfq",
+      "lname": "asdasf",
+      "email": "qwdqw@gmail.com",
+      "message": "asfwqevwe",
+      "id": 30
+    },
+    {
+      "fname": "asdasfq",
+      "lname": "asdasf",
+      "email": "qwdqw@gmail.com",
+      "message": "asfwqevwe",
+      "id": 31
+    },
+    {
+      "fname": "asdasfq",
+      "lname": "asdasf",
+      "email": "qwdqw@gmail.com",
+      "message": "asfwqevwe",
+      "id": 32
+    },
+    {
+      "fname": "asdasfq",
+      "lname": "asdasf",
+      "email": "qwdqw@gmail.com",
+      "message": "asfwqevwe",
+      "id": 33
+    },
+    {
+      "fname": "asdasfq",
+      "lname": "asdasf",
+      "email": "qwdqw@gmail.com",
+      "message": "asfwqevwe",
+      "id": 34
+    },
+    {
+      "fname": "asdasfq",
+      "lname": "asdasf",
+      "email": "qwdqw@gmail.com",
+      "message": "asfwqevwe",
+      "id": 35
+    },
+    {
+      "fname": "asdasfq",
+      "lname": "asdasf",
+      "email": "qwdqw@gmail.com",
+      "message": "asfwqevwe",
+      "id": 36
+    }
+  ]
+}
