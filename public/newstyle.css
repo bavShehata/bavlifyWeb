@@ -76,11 +76,13 @@ textarea {
   cursor: pointer;
   background-color: var(--tertiary-clr);
   color: var(--white-clr);
+  border: 1px solid #888;
 }
 .btn:hover,
 .btn:focus {
   background-color: var(--secondary-clr);
   color: white;
+  border: 1px solid #555;
 }
 .container {
   margin: 0 5vw;
@@ -153,11 +155,9 @@ nav a {
 }
 
 .cta .btn:nth-child(2) {
-  border: 1px solid #888;
   background-color: transparent;
 }
 .cta .btn:nth-child(2):hover {
-  border: 1px solid #555;
   background-color: transparent;
 }
 .grid {
@@ -251,25 +251,36 @@ main {
   margin-bottom: 1rem;
 }
 .slider {
-  height: 500px;
-  background-color: blue;
   position: relative;
+}
+.slider a {
+  display: flex;
+  height: 400px;
 }
 .websiteTitle {
   display: block;
   margin-top: 1rem;
-
   margin-bottom: 1rem;
 }
 .desktop {
-  width: 75%;
-  height: 500px;
+  flex: 3;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.desktop * {
+  width: 100%;
+}
+
+img,
+video {
+  height: 100%;
+  width: 100%;
 }
 .mobile {
-  width: 25%;
-  float: right;
-  height: 500px;
-  border: 5px solid #888;
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 .prev,
 .next {
@@ -294,22 +305,30 @@ main {
   right: 0;
 }
 #about .container {
-  width: max(60ch, 90vw);
-  margin: 0 auto;
+  position: relative;
+  left: 45%;
+  transform: translateX(-50%);
+  max-width: clamp(500px, 80%, 800px);
+  margin: 0 5vw;
   text-align: left;
   padding: 5rem 0;
 }
 #about h3 {
   margin: 3rem 0 1rem 0;
 }
+#aboutMe {
+  display: flex;
+  column-gap: clamp(10px, 5vw, 60px);
+  align-items: center;
+}
 #about img {
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
-  margin: 1rem 0 3rem 0;
+  height: calc(clamp(2rem, 5vw, 2.5rem) * 8);
 }
 #about a {
   text-decoration: underline;
+}
+.lets {
+  font-size: 120%;
 }
 #contact {
   color: var(--white-clr);
