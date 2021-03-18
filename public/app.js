@@ -4,6 +4,8 @@
 // TODO: Add new themes (Valentine)
 // TODO: choosing best about photo, maybe a vector art, or an icon/avatar? and change its position according screen size?
 // TODO: adding the website journal and bavlify directory to my portfolio
+// TODO: making the portfolio responsive
+// TODO: adding the website journal and bavlify directory to my portfolio
 
 // validating Email input
 const reg = {
@@ -72,6 +74,7 @@ function showSlide(n) {
   n = Math.abs(n % maxNum);
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = 'none';
+
     slides[i].style.pointerEvents = 'none';
   }
   slides[n].style.pointerEvents = 'initial';
@@ -80,7 +83,7 @@ function showSlide(n) {
   // Auto browse every 4 seconds
   isBrowsing = setTimeout(function () {
     showSlide((slideIndex += 1));
-  }, 4000);
+  }, 5000);
 }
 
 //themes

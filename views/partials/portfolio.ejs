@@ -1,23 +1,31 @@
 <h1>Portfolio</h1>
 <div class="slideshow-container">
   <div class="container">
-    <!-- Full-width images with number and caption text -->
     <% var i = 0; portfolios.forEach((portfolio) => { i++ %>
     <div class="mySlides fade">
       <div class="slider">
         <a href="<%=portfolio.websiteURL%>">
-          <img
-            src="<%=portfolio.desktopURL%>"
-            alt="<%=portfolio.title%>"
-            class="desktop"
-          />
-        </a>
-        <a href="<%=portfolio.websiteURL%>">
-          <img
-            src="<%=portfolio.mobileURL%>"
-            alt="<%=portfolio.title%>"
-            class="mobile"
-          />
+          <div class="desktop">
+            <!-- The first three videos are mobile, so we show the image in the desktop -->
+            <% if (portfolio.id < 4) {%>
+            <img src="<%=portfolio.desktopURL%>" alt="<%=portfolio.title%>" />
+            <% } else{%>
+            <video src="<%=portfolio.videoURL%>" autoplay loop muted>
+              Can't play this video
+            </video>
+            <% }%>
+          </div>
+          <div class="mobile">
+            <% if (portfolio.id < 4) {%>
+            <video src="<%=portfolio.videoURL%>" autoplay loop muted>
+              Can't play this video
+            </video>
+            <% } else{%>
+
+            <img src="<%=portfolio.mobileURL%>" alt="<%=portfolio.title%>" />
+
+            <% }%>
+          </div>
         </a>
         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
         <a class="next" onclick="plusSlides(1)">&#10095;</a>
