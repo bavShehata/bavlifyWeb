@@ -5,6 +5,7 @@
 // TODO: choosing best about photo, maybe a vector art, or an icon/avatar? and change its position according screen size?
 // TODO: adding the website journal and bavlify directory to my portfolio
 // TODO: making the portfolio responsive
+// TODO: try to capture videos with better frames/fps
 // TODO: adding the website journal and bavlify directory to my portfolio
 
 // validating Email input
@@ -80,6 +81,21 @@ function showSlide(n) {
   slides[n].style.pointerEvents = 'initial';
   slides[n].style.display = 'block';
 
+  // Giving image heights the same as the videos, and img widths of desktop, the same of their
+  // video counterparts
+  // TODO: Make all desktop images the width of desktop videos
+  const vid = slides[n].querySelector('video');
+  const img = slides[n].querySelector('img');
+  const vidHeight = vid.offsetHeight;
+  const vidWidth = vid.offsetWidth;
+  const desktopVid = slides[n].querySelector('.desktop video');
+  if (desktopVid) {
+    desktopVidWidth = desktopVid.offsetWidth;
+  } else {
+    slides[n].querySelector('.desktop img').style.width = desktopVidWidth;
+  }
+  img.style.height = vidHeight;
+  console.log(`${vidHeight} and ${vidWidth}`);
   // Auto browse every 4 seconds
   isBrowsing = setTimeout(function () {
     showSlide((slideIndex += 1));

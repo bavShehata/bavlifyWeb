@@ -40,14 +40,14 @@ app.listen(8001, () => {
 });
 
 // connect to db just for the contacts
-mongoose
-  .connect(dbURI, {
-    useUnifiedTopology: true,
-    useNewUrlParser: true,
-    useCreateIndex: true,
-  })
-  .then(console.log('Connected to databse'))
-  .catch((error) => console.log("Couldn't connect to database\n", error));
+// mongoose
+//   .connect(dbURI, {
+//     useUnifiedTopology: true,
+//     useNewUrlParser: true,
+//     useCreateIndex: true,
+//   })
+//   .then(console.log('Connected to databse'))
+//   .catch((error) => console.log("Couldn't connect to database\n", error));
 
 // middleware & static files
 app.use(favicon(path.join(__dirname, 'public/assets/hero', 'logo.png')));
