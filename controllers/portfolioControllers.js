@@ -9,6 +9,7 @@ module.exports = {
       // The Mongo way
       // const portfolios = await Portfolio.find();
       // The JSON-server way
+      // uri = 'http://localhost:3000/portfolios?_sort=id&_order=desc';
       uri = 'http://localhost:3000/portfolios';
       const result = await axios.get(uri);
       const portfolios = result.data;
