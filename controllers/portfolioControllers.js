@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 const Portfolio = require('../models/portfolioModel');
-var uri = 'http://localhost:3000/portfolios';
+var uri =
+  'https://my-json-server.typicode.com/bavShehata/bavlifyWeb/portfolios';
 const axios = require('axios');
 module.exports = {
   //Show index page
@@ -10,7 +11,8 @@ module.exports = {
       // const portfolios = await Portfolio.find();
       // The JSON-server way
       // uri = 'http://localhost:3000/portfolios?_sort=id&_order=desc';
-      uri = 'http://localhost:3000/portfolios';
+      uri =
+        'https://my-json-server.typicode.com/bavShehata/bavlifyWeb/portfolios';
       const result = await axios.get(uri);
       const portfolios = result.data;
       console.log('Number of portfolios: ', portfolios.length);
@@ -25,7 +27,8 @@ module.exports = {
       // Mongo way
       await Portfolio.deleteMany();
       // JSON Way
-      uri = 'http://localhost:3000/portfolios';
+      uri =
+        'https://my-json-server.typicode.com/bavShehata/bavlifyWeb/portfolios';
       await axios.delete(uri);
       console.log('All portfolios deleted successfully');
     } catch (e) {
@@ -52,7 +55,8 @@ module.exports = {
         websiteURL,
       });
       // JSON way
-      uri = 'http://localhost:3000/portfolios';
+      uri =
+        'https://my-json-server.typicode.com/bavShehata/bavlifyWeb/portfolios';
       portfolio = {
         title,
         desktopURL,

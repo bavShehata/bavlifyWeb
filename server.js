@@ -73,9 +73,6 @@ app.post(
   formControllers.sanitizeContact,
   formControllers.postContact
 );
-app.get('/portfolio', portfolioControllers.portfolioForm);
-app.post('/portfolio', portfolioControllers.addPortfolio);
-app.get('/contact/success', formControllers.getContactSuccess);
 app.use((req, res) => {
   res.render('mainViews/404.ejs', { title: 404 });
 });
