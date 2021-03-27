@@ -3,48 +3,48 @@
     {
       "id": 1,
       "title": "iTunes Clone",
-      "desktopURL": "\\portfolio\\Samples\\iTunesClone\\desktopTunes.png",
-      "mobileURL": "\\portfolio\\Samples\\iTunesClone\\mobileTunes.png",
+      "desktopURL": "\\portfolio\\Samples\\iTunesClone\\desktopTunes.jpg",
+      "mobileURL": "\\portfolio\\Samples\\iTunesClone\\mobileTunes.jpg",
       "websiteURL": "\\portfolio\\Samples\\iTunesClone\\index.html",
       "videoURL": "\\portfolio\\Samples\\iTunesClone\\mtunes.webm"
     },
     {
       "id": 2,
       "title": "Parallax Website",
-      "desktopURL": "\\portfolio\\Samples\\parallaxWebsite\\adesktopParallax.png",
-      "mobileURL": "\\portfolio\\Samples\\parallaxWebsite\\amobileParallax.png",
+      "desktopURL": "\\portfolio\\Samples\\parallaxWebsite\\desktopParallax.jpg",
+      "mobileURL": "\\portfolio\\Samples\\parallaxWebsite\\mobileParallax.jpg",
       "websiteURL": "\\portfolio\\Samples\\parallaxWebsite\\index.html",
       "videoURL": "\\portfolio\\Samples\\parallaxWebsite\\mparallax.webm"
     },
     {
       "id": 3,
       "title": "Photography Site",
-      "desktopURL": "\\portfolio\\Samples\\photographySite\\desktopPhotography.png",
-      "mobileURL": "\\portfolio\\Samples\\photographySite\\mobilePhotography.png",
+      "desktopURL": "\\portfolio\\Samples\\photographySite\\desktopPhotography.jpg",
+      "mobileURL": "\\portfolio\\Samples\\photographySite\\mobilePhotography.jpg",
       "websiteURL": "\\portfolio\\Samples\\photographySite\\index.html",
       "videoURL": "\\portfolio\\Samples\\photographySite\\mphoto.webm"
     },
     {
       "id": 4,
       "title": "Pluralsight Clone",
-      "desktopURL": "\\portfolio\\Samples\\pluralsightClone\\desktopPlural.png",
-      "mobileURL": "\\portfolio\\Samples\\pluralsightClone\\mobilePlural.png",
+      "desktopURL": "\\portfolio\\Samples\\pluralsightClone\\desktopPlural.jpg",
+      "mobileURL": "\\portfolio\\Samples\\pluralsightClone\\mobilePlural.jpg",
       "websiteURL": "\\portfolio\\Samples\\pluralsightClone\\index.html",
       "videoURL": "\\portfolio\\Samples\\pluralsightClone\\dplural.webm"
     },
     {
       "id": 5,
       "title": "ACME Clone",
-      "desktopURL": "\\portfolio\\Samples\\responsiveGridWebsite\\desktopAcme.png",
-      "mobileURL": "\\portfolio\\Samples\\responsiveGridWebsite\\amobileAcme.png",
+      "desktopURL": "\\portfolio\\Samples\\responsiveGridWebsite\\desktopAcme.jpg",
+      "mobileURL": "\\portfolio\\Samples\\responsiveGridWebsite\\mobileAcme.jpg",
       "websiteURL": "\\portfolio\\Samples\\responsiveGridWebsite\\index.html",
       "videoURL": "\\portfolio\\Samples\\responsiveGridWebsite\\dresponsive.webm"
     },
     {
       "id": 6,
       "title": "Blur Landing",
-      "desktopURL": "\\portfolio\\Samples\\blurLanding\\desktopBlur.png",
-      "mobileURL": "\\portfolio\\Samples\\blurLanding\\mobileBlur.png",
+      "desktopURL": "\\portfolio\\Samples\\blurLanding\\desktopBlur.jpg",
+      "mobileURL": "\\portfolio\\Samples\\blurLanding\\mobileBlur.jpg",
       "websiteURL": "\\portfolio\\Samples\\blurLanding\\index.html",
       "videoURL": "\\portfolio\\Samples\\blurLanding\\dblur.webm"
     }
