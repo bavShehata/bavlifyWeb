@@ -301,9 +301,13 @@ main {
   margin: 0 5vw;
   text-align: left;
   padding: 5rem 0;
+  font-family: 'Robot', serif;
 }
-#about h3 {
+#about h2 {
   margin: 3rem 0 1rem 0;
+}
+#about p {
+  font-size: clamp(1.2rem, 1.3vw, 2.3rem);
 }
 #aboutMe {
   display: flex;
@@ -444,6 +448,7 @@ textarea:focus {
 }
 .socialMedia {
   margin-bottom: 5rem;
+  font-family: 'Robot', serif;
 }
 .socialMedia h3 {
   margin-bottom: 0.5rem;
