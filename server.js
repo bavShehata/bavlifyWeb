@@ -8,6 +8,7 @@ const favicon = require('serve-favicon');
 const path = require('path');
 const axios = require('axios');
 const { body, validationResult } = require('express-validator');
+const cors = require('cors');
 
 //Connect to database, just for the contacts, as portfolios are in JSON Server now
 const app = express();
@@ -51,6 +52,7 @@ app.listen(8001, () => {
 
 // middleware & static files
 app.use(favicon(path.join(__dirname, 'public/assets/hero', 'logo.png')));
+app.use(cors());
 app.use('/scripts', express.static(__dirname + '/node_modules/mailcheck/src/'));
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended: true }));

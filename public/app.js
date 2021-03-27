@@ -63,10 +63,11 @@ emailInput.addEventListener('blur', () => {
 var slideIndex = 0;
 var slides = document.querySelectorAll('.mySlides');
 const maxNum = slides.length;
-const vidHeight = slides[1].querySelector('video').offsetHeight;
-const desktopVidWidth = slides[4].querySelector('video').offsetWidth;
-const mobileVidWidth = slides[1].querySelector('video').offsetWidth;
-console.log(vidHeight, desktopVidWidth, mobileVidWidth);
+const desktopVidHeight = slides[4].querySelector('video').offsetHeight; // aspect ratio of 2:1
+const mobileVidHeight = slides[1].querySelector('video').offsetHeight; // aspect ratio of 11:20
+const desktopVidWidth = slides[4].querySelector('video').offsetWidth; // aspect ratio of 2:1
+const mobileVidWidth = slides[1].querySelector('video').offsetWidth; // aspect ratio of 11:20
+
 showSlide(slideIndex);
 // Next/previous controls
 function plusSlides(n) {
@@ -84,18 +85,16 @@ function showSlide(n) {
   slides[n].style.pointerEvents = 'initial';
   slides[n].style.display = 'block';
 
-  // Giving image heights the same as the videos, and img widths of desktop, the same of their
-  // video counterparts
-  // TODO: Make all desktop images the width of desktop videos
+  // Images have the same width and height of the videos
   const desktopVid = slides[n].querySelector('.desktop video');
   const img = slides[n].querySelector('img');
-  img.style.height = vidHeight;
   if (desktopVid) {
     img.style.width = mobileVidWidth;
+    img.style.height = mobileVidHeight;
   } else {
     img.style.width = desktopVidWidth;
+    img.style.height = desktopVidHeight;
   }
-  console.log(img);
   // Auto browse every 4 seconds
   isBrowsing = setTimeout(function () {
     showSlide((slideIndex += 1));
