@@ -66,7 +66,7 @@ const formControllers = require('./controllers/formControllers');
 const portfolioControllers = require('./controllers/portfolioControllers');
 
 //User Routes
-app.get('/', portfolioControllers.getIndex);
+app.get('*', portfolioControllers.getIndex);
 app.post(
   '/',
   formControllers.validateContact,
