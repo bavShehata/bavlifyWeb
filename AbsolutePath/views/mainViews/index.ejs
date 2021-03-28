@@ -1,0 +1,36 @@
+<html lang="en-us">
+  <head>
+    <%- include("../partials/head.ejs") %>
+  </head>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-TZKR4WM"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div id="hero">
+      <div class="container">
+        <header><%- include("../partials/header.ejs") %></header>
+        <section><%- include("../partials/hero.ejs") %></section>
+      </div>
+    </div>
+    <main>
+      <section id="portfolio">
+        <%- include("../partials/portfolio.ejs") %>
+      </section>
+      <section id="about"><%- include("../partials/about.ejs") %></section>
+      <section id="contact">
+        <div class="container"><%- include("../partials/contact.ejs") %></div>
+      </section>
+    </main>
+    <footer><%- include("../partials/footer.ejs") %></footer>
+    <script src="/public/app.js"></script>
+
+    <script src="/scripts/mailcheck.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,65 @@
+<html lang="en-us">
+  <head>
+    <%- include("../partials/head.ejs") %>
+  </head>
+  <body>
+    <header>
+      <%- include("../partials/header.ejs") %>
+    </header>
+    <main>
+      <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+      <form action="/portfolio" method="POST" id="contacting">
+        <div class="nameDiv">
+          <label for="title">title</label>
+          <input
+            type="text"
+            name="title"
+            id="title"
+            placeholder=""
+            required
+          />
+          <label for="desktop">desktop</label>
+          <input
+            type="text"
+            name="desktopURL"
+            id="desktop"
+            placeholder=""
+            required
+          />
+        </div>
+        <label for="mobile">mobile</label>
+        <input
+          type="text"
+          name="mobileURL"
+          id="mobile"
+          placeholder=""
+          required
+        />
+        <label for="website">website</label>
+        <input
+          type="text"
+          name="websiteURL"
+          id="website"
+          placeholder=""
+          required
+        />
+        <input
+          type="submit"
+          name="submit"
+          id="submit"
+          value="submit"
+          class="btn"
+        />
+      </form>
+
+    </main>
+    <footer>
+      <%- include("../partials/footer.ejs") %>
+    </footer>
+    <script src="/app.js"></script>
+    <script
+      src="https://kit.fontawesome.com/6751b3949e.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

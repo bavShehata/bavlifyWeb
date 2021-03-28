@@ -1,0 +1,46 @@
+<h2>Want to get in touch? Fill this form</h2>
+<article class="contactForm"><%- include("contactForm.ejs") %></article>
+<article class="socialMedia">
+  <h3>
+    <span class="separator">OR</span>Find me on one of the following platforms
+  </h3>
+  <%- include("socialMedia.ejs") %>
+</article>
+<% if (contactSuccess == 1) {%>
+<article class="contactConfirmation">
+  <div class="container">
+    <i class="far fa-check-circle"></i>
+    <h2>Your message has been received!</h2>
+    <p>
+      Congratulations, you've taken your first step towards a unique online
+      presence. Please expect a very soon reply, and let's show your business to
+      the world!
+    </p>
+    <button class="btn">Back to website</button>
+  </div>
+</article>
+<script>
+  // Closing success popup
+  // Fisrt, scroll to the top
+  window.scrollTo(0, 0);
+
+  const popup = document.querySelector('.contactConfirmation');
+  const popupWindow = popup.querySelector('div');
+  const popupBtn = popup.querySelector('.btn');
+  // If contact creation was successful
+  // Stop scrolling
+  document.body.style.overflowY = 'hidden';
+  // Close popup if clicked outside the window
+  popup.addEventListener('click', () => {
+    if (!popupWindow.contains(event.target)) {
+      popup.style.display = 'none';
+      document.body.style.overflowY = 'auto';
+    }
+  });
+  // Close popup if clicked on the button
+  popupBtn.addEventListener('click', () => {
+    popup.style.display = 'none';
+    document.body.style.overflowY = 'auto';
+  });
+</script>
+<% }%>

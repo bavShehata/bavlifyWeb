@@ -1,0 +1,58 @@
+<html lang="en-us">
+  <head>
+    <%- include("../partials/head.ejs") %>
+  </head>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-TZKR4WM"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div id="hero">
+      <div class="container">
+        <header><%- include("../partials/header.ejs") %></header>
+        <div class="absolute grid">
+          <img
+            src="/public/assets/hero/circlel.svg"
+            alt="large circle"
+            class="large"
+          />
+          <img
+            src="/public/assets/hero/circlem.svg"
+            alt="medium circle"
+            class="medium"
+          />
+          <img
+            src="/public/assets/hero/circles.svg"
+            alt="small circle"
+            class="small"
+          />
+        </div>
+        <div class="absolute grid">
+          <div class="text">
+            <h1 class="bold">404 error!</h1>
+            <h2>check your internet connection and try again</h2>
+          </div>
+          <div class="cta">
+            <a href="/#portfolio" class="btn">Portfolio</a>
+            <a href="/#contact" class="btn">Contact</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer><%- include("../partials/footer.ejs") %></footer>
+    <script src="/public/app.js"></script>
+    <script
+      src="https://kit.fontawesome.com/6751b3949e.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="/scripts/mailcheck.min.js"></script>
+  </body>
+</html>

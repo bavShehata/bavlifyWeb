@@ -1,0 +1,33 @@
+<form action="/" method="POST" id="contacting">
+  <img src="/public/assets/hero/logo.svg" alt="Logo" class="logoImg" />
+  <div>
+    <label for="fName" id="fNameL">First Name</label>
+    <input type="text" name="fname" id="fName" required />
+  </div>
+  <div>
+    <label for="lName" id="lNameL">Last Name</label>
+    <input type="text" name="lname" id="lName" required />
+  </div>
+  <div>
+    <label for="email">E-mail address</label>
+    <input type="email" name="email" id="email" required />
+    <p class="errorPara">Please enter a valid E-mail address</p>
+    <p class="suggestionPara">Did you mean <span class="suggested"></span></p>
+  </div>
+  <div>
+    <label for="message">Message</label>
+    <textarea
+      name="message"
+      id="message"
+      placeholder="Time for your business to shine"
+      required
+    ></textarea>
+  </div>
+  <input
+    type="submit"
+    name="submit"
+    id="submit"
+    value="Contact Me"
+    class="btn"
+  />
+</form>

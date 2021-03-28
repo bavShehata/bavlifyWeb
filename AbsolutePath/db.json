@@ -1,0 +1,61 @@
+{
+  "portfolios": [
+    {
+      "id": 1,
+      "title": "iTunes Clone",
+      "desktopURL": "\\public\\portfolio\\Samples\\iTunesClone\\desktopTunes.jpg",
+      "mobileURL": "\\public\\portfolio\\Samples\\iTunesClone\\mobileTunes.jpg",
+      "websiteURL": "\\public\\portfolio\\Samples\\iTunesClone\\index.html",
+      "videoURL": "\\public\\portfolio\\Samples\\iTunesClone\\mtunes.webm"
+    },
+    {
+      "id": 2,
+      "title": "Parallax Website",
+      "desktopURL": "\\public\\portfolio\\Samples\\parallaxWebsite\\desktopParallax.jpg",
+      "mobileURL": "\\public\\portfolio\\Samples\\parallaxWebsite\\mobileParallax.jpg",
+      "websiteURL": "\\public\\portfolio\\Samples\\parallaxWebsite\\index.html",
+      "videoURL": "\\public\\portfolio\\Samples\\parallaxWebsite\\mparallax.webm"
+    },
+    {
+      "id": 3,
+      "title": "Photography Site",
+      "desktopURL": "\\public\\portfolio\\Samples\\photographySite\\desktopPhotography.jpg",
+      "mobileURL": "\\public\\portfolio\\Samples\\photographySite\\mobilePhotography.jpg",
+      "websiteURL": "\\public\\portfolio\\Samples\\photographySite\\index.html",
+      "videoURL": "\\public\\portfolio\\Samples\\photographySite\\mphoto.webm"
+    },
+    {
+      "id": 4,
+      "title": "Pluralsight Clone",
+      "desktopURL": "\\public\\portfolio\\Samples\\pluralsightClone\\desktopPlural.jpg",
+      "mobileURL": "\\public\\portfolio\\Samples\\pluralsightClone\\mobilePlural.jpg",
+      "websiteURL": "\\public\\portfolio\\Samples\\pluralsightClone\\index.html",
+      "videoURL": "\\public\\portfolio\\Samples\\pluralsightClone\\dplural.webm"
+    },
+    {
+      "id": 5,
+      "title": "ACME Clone",
+      "desktopURL": "\\public\\portfolio\\Samples\\responsiveGridWebsite\\desktopAcme.jpg",
+      "mobileURL": "\\public\\portfolio\\Samples\\responsiveGridWebsite\\mobileAcme.jpg",
+      "websiteURL": "\\public\\portfolio\\Samples\\responsiveGridWebsite\\index.html",
+      "videoURL": "\\public\\portfolio\\Samples\\responsiveGridWebsite\\dresponsive.webm"
+    },
+    {
+      "id": 6,
+      "title": "Blur Landing",
+      "desktopURL": "\\public\\portfolio\\Samples\\blurLanding\\desktopBlur.jpg",
+      "mobileURL": "\\public\\portfolio\\Samples\\blurLanding\\mobileBlur.jpg",
+      "websiteURL": "\\public\\portfolio\\Samples\\blurLanding\\index.html",
+      "videoURL": "\\public\\portfolio\\Samples\\blurLanding\\dblur.webm"
+    }
+  ],
+  "contact": [
+    {
+      "id": 1,
+      "fname": "Bavly",
+      "lname": "Shehata",
+      "email": "bavshehata@gmail.com",
+      "message": "Hello there guys"
+    }
+  ]
+}
