@@ -9,7 +9,6 @@ const path = require('path');
 const axios = require('axios');
 const { body, validationResult } = require('express-validator');
 const cors = require('cors');
-
 //Connect to database, just for the contacts, as portfolios are in JSON Server now
 const app = express();
 
@@ -36,8 +35,9 @@ dbURI = `mongodb://${process.env.dbUser}:${process.env.dbPass}@${process.env.clu
 //   .catch((error) => console.log("Couldn't connect to database\n", error));
 
 // with JSON Server, we can listen to the port without having to connect to db.
-app.listen(8001, () => {
-  console.log('Listening on port 8001');
+const port = process.env.PORT ?? 8001;
+app.listen(port, () => {
+  // console.log(`Listening on port ${port}`);
 });
 
 // connect to db just for the contacts

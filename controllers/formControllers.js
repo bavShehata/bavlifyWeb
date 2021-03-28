@@ -8,7 +8,7 @@ require('dotenv/config');
 const reg = {
   name: /^[a-z-_]{1,20}$/i,
   email: /^([^@]+)@(.+)\.(.+)$/i, //And send a confirmation Email anyways
-  message: /^.{1,1000}$/s,
+  message: /^[^\x05]{1,1000}$/,
 };
 module.exports = {
   validateContact: (req, res, next) => {
