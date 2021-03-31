@@ -63,9 +63,9 @@ emailInput.addEventListener('blur', () => {
 var slideIndex = 0;
 var slides = document.querySelectorAll('.mySlides');
 const maxNum = slides.length;
-const desktopVidHeight = slides[4].querySelector('video').offsetHeight; // aspect ratio of 2:1
+const desktopVidHeight = slides[5].querySelector('video').offsetHeight; // aspect ratio of 2:1
 const mobileVidHeight = slides[1].querySelector('video').offsetHeight; // aspect ratio of 11:20
-const desktopVidWidth = slides[4].querySelector('video').offsetWidth; // aspect ratio of 2:1
+const desktopVidWidth = slides[5].querySelector('video').offsetWidth; // aspect ratio of 2:1
 const mobileVidWidth = slides[1].querySelector('video').offsetWidth; // aspect ratio of 11:20
 
 showSlide(slideIndex);
@@ -98,7 +98,7 @@ function showSlide(n) {
   // Auto browse every 4 seconds
   isBrowsing = setTimeout(function () {
     showSlide((slideIndex += 1));
-  }, 5000);
+  }, 4000);
 }
 
 //themes
