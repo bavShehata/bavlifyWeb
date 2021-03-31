@@ -53,7 +53,10 @@ app.listen(port, () => {
 // middleware & static files
 // app.use(favicon(path.join(__dirname, 'public/assets/hero', 'logo.png')));
 app.use(cors());
-app.use('/scripts', express.static(__dirname + '/node_modules/mailcheck/src/'));
+// app.use(
+//   '/scripts',
+//   express.static(__dirname + '/public/node_modules/mailcheck/src/')
+// );
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
