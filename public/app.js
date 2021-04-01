@@ -5,6 +5,8 @@
 // TODO: a better way to show portfolio without lagging at first
 // TODO: BOTH SHOULD BE VIDEOS, DESKTOP AND MOBILE
 // TODO: optimize everything (Gzip and minifying and linters)
+// TODO: smooth portfolio transitions
+// TODO: add animations
 
 // validating Email input
 const reg = {

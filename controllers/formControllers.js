@@ -3,6 +3,7 @@ const Contact = require('../models/contactModel');
 const Portfolio = require('../models/portfolioModel');
 const { body, validationResult } = require('express-validator');
 const axios = require('axios');
+const nodemailer = require('nodemailer');
 require('dotenv/config');
 
 const reg = {
