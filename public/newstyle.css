@@ -416,7 +416,7 @@ textarea:focus {
   border-radius: 10px;
   padding: 3rem;
 }
-.contactConfirmation i {
+.contactConfirmation .icon-check-circle-o {
   font-size: min(20rem, 30vh);
   color: var(--accent-clr);
 }

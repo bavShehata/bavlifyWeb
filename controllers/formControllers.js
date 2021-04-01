@@ -63,7 +63,9 @@ module.exports = {
       // const portfolios = await Portfolio.find();
       // The JSON-server way
       // Email is only sent through mobile data, not uni wifi??????
-      uri = 'http://localhost:3000/portfolios';
+      // uri = 'http://localhost:3000/portfolios?_sort=id&_order=desc';
+      uri =
+        'https://my-json-server.typicode.com/bavShehata/bavlifyWeb/portfolios';
       const result = await axios.get(uri);
       const portfolios = result.data;
       console.log('Number of portfolios: ', portfolios.length); // The JSON-server way
