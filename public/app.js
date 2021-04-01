@@ -1,12 +1,8 @@
-// TODO: Finish slider and customize it
-// TODO: Fix images
 // TODO: Check the halloween theme
 // TODO: Add new themes (Valentine)
 // TODO: choosing best about photo, maybe a vector art, or an icon/avatar? and change its position according screen size?
 // TODO: adding the website journal and bavlify directory to my portfolio
-// TODO: making the portfolio responsive
-// TODO: try to capture videos with better frames/fps
-// TODO: adding the website journal and bavlify directory to my portfolio
+// TODO: a better way to show portfolio without lagging at first
 
 // validating Email input
 const reg = {
@@ -60,21 +56,47 @@ emailInput.addEventListener('blur', () => {
 });
 
 // Portfolio slideshow
+var desktopVidHeight, mobileVidHeight, desktopVidWidth, mobileVidWidth;
 var slideIndex = 0;
 var slides = document.querySelectorAll('.mySlides');
-const maxNum = slides.length;
-const desktopVidHeight = slides[5].querySelector('video').offsetHeight; // aspect ratio of 2:1
-const mobileVidHeight = slides[1].querySelector('video').offsetHeight; // aspect ratio of 11:20
-const desktopVidWidth = slides[5].querySelector('video').offsetWidth; // aspect ratio of 2:1
-const mobileVidWidth = slides[1].querySelector('video').offsetWidth; // aspect ratio of 11:20
+window.onload = function () {
+  // Wait for everything to load so that we can get the offsetHeight and width accurately, then run the function of slideShowing
 
-showSlide(slideIndex);
+  desktopVidHeight = slides[5].querySelector('video').offsetHeight; // aspect ratio of 1.73:1
+  mobileVidHeight = slides[1].querySelector('video').offsetHeight; // aspect ratio of 11:20
+  desktopVidWidth = slides[5].querySelector('video').offsetWidth; // aspect ratio of 1.73:1
+  mobileVidWidth = slides[1].querySelector('video').offsetWidth; // aspect ratio of 11:20
+  console.log(
+    `Desktop Video Height is ${desktopVidHeight}px vs ${
+      slides[5].querySelector('video').videoHeight
+    }\n`
+  );
+  console.log(
+    `Desktop Video Width is ${desktopVidWidth}px vs ${
+      slides[5].querySelector('video').videoWidth
+    }\n`
+  );
+  console.log(
+    `Mobile Video Height is ${mobileVidHeight}px vs ${
+      slides[1].querySelector('video').videoHeight
+    }\n`
+  );
+  console.log(
+    `Mobile Video Width is ${mobileVidWidth}px vs ${
+      slides[1].querySelector('video').videoWidth
+    }\n`
+  );
+  showSlide(slideIndex);
+};
+
 // Next/previous controls
 function plusSlides(n) {
   window.clearTimeout(isBrowsing);
   showSlide((slideIndex += n));
 }
 function showSlide(n) {
+  const maxNum = slides.length;
+
   // Cycle from 0 to number of slides
   n = Math.abs(n % maxNum);
   for (i = 0; i < slides.length; i++) {
@@ -91,14 +113,17 @@ function showSlide(n) {
   if (desktopVid) {
     img.style.width = mobileVidWidth;
     img.style.height = mobileVidHeight;
+    // desktopVid.style.width = '60vw';
   } else {
+    const mobileVid = slides[n].querySelector('.mobile video');
+    // mobileVid.style.width = 'calc(60vw*0.313)';
     img.style.width = desktopVidWidth;
     img.style.height = desktopVidHeight;
   }
   // Auto browse every 4 seconds
-  isBrowsing = setTimeout(function () {
-    showSlide((slideIndex += 1));
-  }, 4000);
+  // isBrowsing = setTimeout(function () {
+  //   showSlide((slideIndex += 1));
+  // }, 4000);
 }
 
 //themes

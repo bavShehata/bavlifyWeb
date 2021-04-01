@@ -258,12 +258,20 @@ main {
   justify-content: space-between;
   align-items: center;
 }
-.desktop video {
+/* Considering the aspect ratio of both videos so that they can have equal height */
+.desktop video,
+.desktop img {
   width: 60vw;
 }
-/* Considering the aspect ratio of both videos so that they can have equal height */
-.mobile video {
-  width: calc(60vw * 0.275);
+/* Divide the width by 1.73 (the aspect ratio of desktop videos) to get approximate height */
+.desktop img {
+  height: calc(60vw / 1.73);
+}
+/* Multiply the width by .313 (trial and error) to get equal heights */
+
+.mobile video,
+.mobile img {
+  width: calc(60vw * 0.313);
 }
 
 .prev,
