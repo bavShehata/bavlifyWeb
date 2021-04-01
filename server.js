@@ -16,23 +16,14 @@ const app = express();
 var dbURI = `mongodb+srv://${process.env.dbUser}:${process.env.dbPass}@${process.env.clusterName}.jgkgp.mongodb.net/${process.env.dbName}?retryWrites=true&w=majority`;
 //2.12 or later
 dbURI = `mongodb://${process.env.dbUser}:${process.env.dbPass}@${process.env.clusterName}-shard-00-00.jgkgp.mongodb.net:27017,${process.env.clusterName}-shard-00-01.jgkgp.mongodb.net:27017,${process.env.clusterName}-shard-00-02.jgkgp.mongodb.net:27017/${process.env.dbName}?ssl=true&replicaSet=atlas-wdji3c-shard-0&authSource=admin&retryWrites=true&w=majority`;
-// mongoose
-//   .connect(dbURI, {
-//     useUnifiedTopology: true,
-//     useNewUrlParser: true,
-//     useCreateIndex: true,
-//   })
-//   .then(
-//     app.listen(8001, () => {
-//       console.log("Listening on port 8001");
-//       let width = 360;
-//       let large = width * 0.56;
-//       let medium = large * 0.674;
-//       let small = large * 0.52;
-//       console.log(large, medium, small);
-//     })
-//   )
-//   .catch((error) => console.log("Couldn't connect to database\n", error));
+mongoose
+  .connect(dbURI, {
+    useUnifiedTopology: true,
+    useNewUrlParser: true,
+    useCreateIndex: true,
+  })
+  .then(console.log('Connected to database'))
+  .catch((error) => console.log("Couldn't connect to database\n", error));
 
 // with JSON Server, we can listen to the port without having to connect to db.
 const port = process.env.PORT ?? 8001;
