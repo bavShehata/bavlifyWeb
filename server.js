@@ -19,7 +19,6 @@ dbURI = `mongodb://${process.env.dbUser}:${process.env.dbPass}@${process.env.clu
 console.log('\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n');
 console.log(
   '------------------Server initiated-------------------\n',
-  process.env
 );
 mongoose
   .connect(dbURI, {
