@@ -17,7 +17,10 @@ var dbURI = `mongodb+srv://${process.env.dbUser}:${process.env.dbPass}@${process
 //2.12 or later
 dbURI = `mongodb://${process.env.dbUser}:${process.env.dbPass}@${process.env.clusterName}-shard-00-00.jgkgp.mongodb.net:27017,${process.env.clusterName}-shard-00-01.jgkgp.mongodb.net:27017,${process.env.clusterName}-shard-00-02.jgkgp.mongodb.net:27017/${process.env.dbName}?ssl=true&replicaSet=atlas-wdji3c-shard-0&authSource=admin&retryWrites=true&w=majority`;
 console.log('\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n');
-console.log('------------------Server initiated-------------------\n');
+console.log(
+  '------------------Server initiated-------------------\n',
+  process.env
+);
 mongoose
   .connect(dbURI, {
     useUnifiedTopology: true,
