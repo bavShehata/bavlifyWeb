@@ -16,13 +16,15 @@ const app = express();
 var dbURI = `mongodb+srv://${process.env.dbUser}:${process.env.dbPass}@${process.env.clusterName}.jgkgp.mongodb.net/${process.env.dbName}?retryWrites=true&w=majority`;
 //2.12 or later
 dbURI = `mongodb://${process.env.dbUser}:${process.env.dbPass}@${process.env.clusterName}-shard-00-00.jgkgp.mongodb.net:27017,${process.env.clusterName}-shard-00-01.jgkgp.mongodb.net:27017,${process.env.clusterName}-shard-00-02.jgkgp.mongodb.net:27017/${process.env.dbName}?ssl=true&replicaSet=atlas-wdji3c-shard-0&authSource=admin&retryWrites=true&w=majority`;
+console.log('\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n');
+console.log('------------------Server initiated-------------------\n');
 mongoose
   .connect(dbURI, {
     useUnifiedTopology: true,
     useNewUrlParser: true,
     useCreateIndex: true,
   })
-  .then(console.log('Connected to database'))
+  .then(console.log('Connected to database\n Be Happy!!\n'))
   .catch((error) => console.log("Couldn't connect to database\n", error));
 
 // with JSON Server, we can listen to the port without having to connect to db.
@@ -30,17 +32,6 @@ const port = process.env.PORT ?? 8001;
 app.listen(port, () => {
   // console.log(`Listening on port ${port}`);
 });
-
-// connect to db just for the contacts
-// mongoose
-//   .connect(dbURI, {
-//     useUnifiedTopology: true,
-//     useNewUrlParser: true,
-//     useCreateIndex: true,
-//   })
-//   .then(console.log('Connected to databse'))
-//   .catch((error) => console.log("Couldn't connect to database\n", error));
-
 // middleware & static files
 app.use(favicon(path.join(__dirname, 'public/assets/hero', 'logo.png')));
 app.use(cors());

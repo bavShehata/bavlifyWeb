@@ -74,11 +74,11 @@ module.exports = {
       console.log("Couldn't add contact\n", e);
     }
   },
-  getContactSuccess: async (req, res) => {
-    try {
-      res.render('mainViews/contactSuccess.ejs');
-    } catch (e) {
-      console.log("Couldn't show contact success page\n", e);
-    }
-  },
+  // getContactSuccess: async (req, res) => {
+  //   try {
+  //     res.render('mainViews/contactSuccess.ejs');
+  //   } catch (e) {
+  //     console.log("Couldn't show contact success page\n", e);
+  //   }
+  // },
 };

@@ -4,6 +4,7 @@
 // TODO: adding the website journal and bavlify directory to my portfolio
 // TODO: a better way to show portfolio without lagging at first
 // TODO: BOTH SHOULD BE VIDEOS, DESKTOP AND MOBILE
+// TODO: optimize everything (Gzip and minifying and linters)
 
 // validating Email input
 const reg = {
