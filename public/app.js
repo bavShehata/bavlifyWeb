@@ -3,6 +3,7 @@
 // TODO: choosing best about photo, maybe a vector art, or an icon/avatar? and change its position according screen size?
 // TODO: adding the website journal and bavlify directory to my portfolio
 // TODO: a better way to show portfolio without lagging at first
+// TODO: BOTH SHOULD BE VIDEOS, DESKTOP AND MOBILE
 
 // validating Email input
 const reg = {
@@ -59,6 +60,7 @@ emailInput.addEventListener('blur', () => {
 var desktopVidHeight, mobileVidHeight, desktopVidWidth, mobileVidWidth;
 var slideIndex = 0;
 var slides = document.querySelectorAll('.mySlides');
+var videos = document.querySelectorAll('video');
 window.onload = function () {
   // Wait for everything to load so that we can get the offsetHeight and width accurately, then run the function of slideShowing
 
@@ -107,6 +109,9 @@ function showSlide(n) {
   slides[n].style.pointerEvents = 'initial';
   slides[n].style.display = 'block';
 
+  // Start every video from the beginning and play it
+  slides[n].querySelector('video').currentTime = 0;
+  slides[n].querySelector('video').play();
   // Images have the same width and height of the videos
   const desktopVid = slides[n].querySelector('.desktop video');
   const img = slides[n].querySelector('img');
@@ -121,9 +126,9 @@ function showSlide(n) {
     img.style.height = desktopVidHeight;
   }
   // Auto browse every 4 seconds
-  // isBrowsing = setTimeout(function () {
-  //   showSlide((slideIndex += 1));
-  // }, 4000);
+  isBrowsing = setTimeout(function () {
+    showSlide((slideIndex += 1));
+  }, 4500);
 }
 
 //themes
