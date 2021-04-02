@@ -10,7 +10,7 @@
             <% if (portfolio.id < 4) {%>
             <img src="<%=portfolio.desktopURL%>" alt="<%=portfolio.title%>" />
             <% } else{%>
-            <video muted>
+            <video muted playsinline>
               <source src="<%=portfolio.videoURL%>" type="video/webm" />
               Can't play this video
             </video>
@@ -18,7 +18,7 @@
           </div>
           <div class="mobile">
             <% if (portfolio.id < 4) {%>
-            <video muted>
+            <video muted playsinline>
               <source src="<%=portfolio.videoURL%>" type="video/webm" />
               Can't play this video
             </video>
