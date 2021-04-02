@@ -9,6 +9,7 @@ const path = require('path');
 const axios = require('axios');
 const { body, validationResult } = require('express-validator');
 const cors = require('cors');
+var enforce = require('express-sslify');
 //Connect to database, just for the contacts, as portfolios are in JSON Server now
 const app = express();
 
@@ -41,7 +42,7 @@ app.use('/scripts', express.static(__dirname + '/node_modules/mailcheck/src/'));
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-
+app.use(enforce.HTTPS({ trustProtoHeader: true,trustXForwardedHostHeader: true }))
 // register view engine
 app.set('view engine', 'ejs');
 
