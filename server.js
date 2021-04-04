@@ -33,7 +33,7 @@ mongoose
   .catch((error) => console.log("Couldn't connect to database\n", error));
 
 // with JSON Server, we can listen to the port without having to connect to db.
-// const port = process.env.PORT ?? 8001;
+const port = process.env.PORT ?? 8001;
 
 // // DEV OPTIONS
 // var https = require('https');
