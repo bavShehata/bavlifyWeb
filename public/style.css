@@ -245,8 +245,27 @@ main {
 #portfolio h1 {
   margin-bottom: 1rem;
 }
+#portfolio .container{
+  position: relative;
+  height: calc(60vw / 1.73 + 5rem);
+
+}
+.mySlides{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s linear;
+}
+.appear{
+  visibility: visible;
+  opacity: 1;
+}
 .slider {
   position: relative;
+
 }
 .slider a {
   display: flex;

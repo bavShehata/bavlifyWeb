@@ -98,12 +98,9 @@ console.log(
     // Cycle from 0 to number of slides
     n = Math.abs(n % maxNum);
     for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-  
-      slides[i].style.pointerEvents = "none";
+      slides[i].classList.remove("appear");
     }
-    slides[n].style.pointerEvents = "initial";
-    slides[n].style.display = "block";
+    slides[n].classList.add("appear");
   
     // Start every video from the beginning and play it
     slides[n].querySelector("video").currentTime = 0;
