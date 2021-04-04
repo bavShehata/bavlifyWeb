@@ -10,6 +10,8 @@ const axios = require('axios');
 const { body, validationResult } = require('express-validator');
 const cors = require('cors');
 var enforce = require('express-sslify');
+
+
 //Connect to database, just for the contacts, as portfolios are in JSON Server now
 const app = express();
 
@@ -32,9 +34,24 @@ mongoose
 
 // with JSON Server, we can listen to the port without having to connect to db.
 const port = process.env.PORT ?? 8001;
-app.listen(port, () => {
-  // console.log(`Listening on port ${port}`);
-});
+
+// DEV OPTIONS
+var https = require('https');
+
+var fs = require('fs');
+
+var https_options = {
+
+  key: fs.readFileSync("/home/bavshehata/cert-keys/server.key"),
+
+  cert: fs.readFileSync("/home/bavshehata/cert-keys/server.crt"),
+
+};
+https.createServer(https_options, app).listen(port);
+// END DEV OPTIONS
+// app.listen(port, () => {
+//   // console.log(`Listening on port ${port}`);
+// });
 // middleware & static files
 app.use(favicon(path.join(__dirname, 'public/assets/hero', 'logo.png')));
 app.use(cors());
