@@ -108,7 +108,7 @@ console.log(
     // Start every video from the beginning and play it
     slides[n].querySelector("video").currentTime = 0;
   
-    slides[n].querySelector("video").load();
+    // slides[n].querySelector("video").load();
     slides[n].querySelector("video").play().catch(function(n){console.log("Error playing video\n",e)});
     slides[n]
       .querySelector("video")

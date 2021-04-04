@@ -6,7 +6,8 @@
       "desktopURL": "\\portfolio\\Samples\\iTunesClone\\desktopTunes.jpg",
       "mobileURL": "\\portfolio\\Samples\\iTunesClone\\mobileTunes.jpg",
       "websiteURL": "\\portfolio\\Samples\\iTunesClone\\index.html",
-      "videoURL": "\\portfolio\\Samples\\iTunesClone\\mtunes.webm"
+      "videoURLwebm": "\\portfolio\\Samples\\iTunesClone\\mtunes.webm",
+      "videoURLmp4": "\\portfolio\\Samples\\iTunesClone\\mtunes.mp4"
     },
     {
       "id": 2,
@@ -14,7 +15,8 @@
       "desktopURL": "\\portfolio\\Samples\\parallaxWebsite\\desktopParallax.jpg",
       "mobileURL": "\\portfolio\\Samples\\parallaxWebsite\\mobileParallax.jpg",
       "websiteURL": "\\portfolio\\Samples\\parallaxWebsite\\index.html",
-      "videoURL": "\\portfolio\\Samples\\parallaxWebsite\\mparallax.webm"
+      "videoURLwebm": "\\portfolio\\Samples\\parallaxWebsite\\mparallax.webm",
+      "videoURLmp4": "\\portfolio\\Samples\\parallaxWebsite\\mparallax.mp4"
     },
     {
       "id": 3,
@@ -22,7 +24,8 @@
       "desktopURL": "\\portfolio\\Samples\\photographySite\\desktopPhotography.jpg",
       "mobileURL": "\\portfolio\\Samples\\photographySite\\mobilePhotography.jpg",
       "websiteURL": "\\portfolio\\Samples\\photographySite\\index.html",
-      "videoURL": "\\portfolio\\Samples\\photographySite\\mphoto.webm"
+      "videoURLwebm": "\\portfolio\\Samples\\photographySite\\mphoto.webm",
+      "videoURLmp4": "\\portfolio\\Samples\\photographySite\\mphoto.mp4"
     },
     {
       "id": 4,
@@ -30,7 +33,8 @@
       "desktopURL": "\\portfolio\\Samples\\pluralsightClone\\desktopPlural.jpg",
       "mobileURL": "\\portfolio\\Samples\\pluralsightClone\\mobilePlural.jpg",
       "websiteURL": "\\portfolio\\Samples\\pluralsightClone\\index.html",
-      "videoURL": "\\portfolio\\Samples\\pluralsightClone\\dplural.webm"
+      "videoURLwebm": "\\portfolio\\Samples\\pluralsightClone\\dplural.webm",
+      "videoURLmp4": "\\portfolio\\Samples\\pluralsightClone\\dplural.mp4"
     },
     {
       "id": 5,
@@ -38,7 +42,8 @@
       "desktopURL": "\\portfolio\\Samples\\responsiveGridWebsite\\desktopAcme.jpg",
       "mobileURL": "\\portfolio\\Samples\\responsiveGridWebsite\\mobileAcme.jpg",
       "websiteURL": "\\portfolio\\Samples\\responsiveGridWebsite\\index.html",
-      "videoURL": "\\portfolio\\Samples\\responsiveGridWebsite\\dacme.webm"
+      "videoURLwebm": "\\portfolio\\Samples\\responsiveGridWebsite\\dacme.webm",
+      "videoURLmp4": "\\portfolio\\Samples\\responsiveGridWebsite\\dacme.mp4"
     },
     {
       "id": 6,
@@ -46,7 +51,8 @@
       "desktopURL": "\\portfolio\\Samples\\blurLanding\\desktopBlur.jpg",
       "mobileURL": "\\portfolio\\Samples\\blurLanding\\mobileBlur.jpg",
       "websiteURL": "\\portfolio\\Samples\\blurLanding\\index.html",
-      "videoURL": "\\portfolio\\Samples\\blurLanding\\dblur.webm"
+      "videoURLwebm": "\\portfolio\\Samples\\blurLanding\\dblur.webm",
+      "videoURLmp4": "\\portfolio\\Samples\\blurLanding\\dblur.mp4"
     }
   ],
   "contact": [

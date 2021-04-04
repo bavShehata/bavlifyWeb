@@ -11,7 +11,8 @@
             <img src="<%=portfolio.desktopURL%>" alt="<%=portfolio.title%>" />
             <% } else{%>
             <video muted playsinline>
-              <source src="<%=portfolio.videoURL%>" type="video/webm" />
+              <source src="<%=portfolio.videoURLwebm%>" type="video/webm" />
+              <source src="<%=portfolio.videoURLmp4%>" type="video/mp4" />
               Can't play this video
             </video>
             <% }%>
@@ -19,7 +20,8 @@
           <div class="mobile">
             <% if (portfolio.id < 4) {%>
             <video muted playsinline>
-              <source src="<%=portfolio.videoURL%>" type="video/webm" />
+              <source src="<%=portfolio.videoURLwebm%>" type="video/webm" />
+              <source src="<%=portfolio.videoURLmp4%>" type="video/mp4" />
               Can't play this video
             </video>
             <% } else{%>
