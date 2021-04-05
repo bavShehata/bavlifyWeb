@@ -197,9 +197,9 @@ nav a {
     --large-circle-size: 48vh;
     --medium-circle-size: calc(var(--large-circle-size) * 0.674);
     --small-circle-size: calc(var(--large-circle-size) * 0.52);
-    grid-template-columns: calc(
-        (var(--large-circle-size) / 2) + (var(--medium-circle-size) / 2)
-      ) calc((var(--large-circle-size) / 2) + (var(--small-circle-size) / 2));
+    grid-template-columns:
+      calc((var(--large-circle-size) / 2) + (var(--medium-circle-size) / 2))
+      calc((var(--large-circle-size) / 2) + (var(--small-circle-size) / 2));
     grid-template-rows: var(--large-circle-size) var(--medium-circle-size);
     grid-row-gap: 0;
     right: 5vw;
@@ -245,32 +245,78 @@ main {
 #portfolio h1 {
   margin-bottom: 1rem;
 }
-#portfolio .container{
+#portfolio .container {
+  display: flex;
   position: relative;
   height: calc(60vw / 1.73 + 5rem);
+  margin: 0;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
 
 }
 .mySlides{
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  visibility: hidden;
-  opacity: 0;
-  transition: visibility 0s, opacity 0.5s linear;
+  transition: transform .5s ease-out;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
 }
-.appear{
-  visibility: visible;
-  opacity: 1;
-}
-.slider {
-  position: relative;
-
-}
-.slider a {
+.slider a:first-child {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 90vw;
+  margin: 0 5vw;
+
+}
+.prev,
+.next {
+  display: none;
+}
+/* For desktop, we don't do swipes */
+@media (hover: hover) {
+  #portfolio .container {
+    display: block;
+    scroll-snap-type:none;
+    overflow:hidden;
+
+  }
+  .mySlides {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s linear;
+  }
+  .appear {
+    visibility: visible;
+    opacity: 1;
+  }
+  .prev,
+  .next {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    height: 100%;
+    border-radius: 5px;
+  }
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  .prev {
+    left: 0;
+  }
+  .next {
+    right: 0;
+  }
+  .prev span,
+  .next span {
+    margin: 0 10px;
+  }
 }
 /* Considering the aspect ratio of both videos so that they can have equal height */
 .desktop video,
@@ -285,31 +331,6 @@ main {
 .mobile video,
 .mobile img {
   width: calc(60vw * 0.313);
-}
-.prev,
-.next {
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  top: 0;
-  background-color: rgba(0, 0, 0, 0.4);
-  height: 100%;
-  border-radius: 5px;
-}
-.prev:hover,
-.next:hover {
-  background-color: rgba(0, 0, 0, 0.7);
-}
-.prev {
-  left: 0;
-}
-.next {
-  right: 0;
-}
-.prev span,
-.next span{
-  margin: 0 10px;
 }
 .websiteTitle {
   display: block;
