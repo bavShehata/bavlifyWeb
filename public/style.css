@@ -239,6 +239,7 @@ main {
   flex: 1 0 auto;
 }
 #portfolio {
+  overflow:hidden;
   padding: 2rem 0;
   background-color: #000;
 }
@@ -250,16 +251,31 @@ main {
   position: relative;
   height: calc(60vw / 1.73 + 5rem);
   margin: 0;
+  /* scroll-snap-type: x mandatory; */
+  --device:mobile;
   overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  --device: mobile;
-
 
 }
 .mySlides{
   transition: transform .5s ease-out;
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
+  /* scroll-snap-align: start;
+  scroll-snap-stop: always; */
+}
+.mySlides {
+  /* commenting this causes the error (The position), the error of the second vid not working and the first not repeating */
+  position: absolute; 
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s linear;
+}
+.appear {
+  visibility: visible;
+  opacity: 1;
 }
 .slider a:first-child {
   display: flex;
@@ -274,16 +290,17 @@ main {
   display: none;
 }
 /* For desktop, we don't do swipes */
-@media (hover: hover) {
+/* @media (hover: hover) { */
   #portfolio .container {
-    display: block;
-    scroll-snap-type:none;
-    overflow:hidden;
-    --device: desktop;
+    display: block; 
+    /* scroll-snap-type:none; */
+    overflow: auto;
+    --device:desktop;
 
   }
   .mySlides {
-    position: absolute;
+    /* commenting this causes the error (The position), the error of the second vid not working and the first not repeating */
+    position: absolute; 
     top: 0;
     left: 0;
     right: 0;
@@ -320,7 +337,7 @@ main {
   .next span {
     margin: 0 10px;
   }
-}
+/* } */
 /* Considering the aspect ratio of both videos so that they can have equal height */
 .desktop video,
 .desktop img {

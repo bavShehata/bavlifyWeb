@@ -107,19 +107,19 @@ window.onload = function () {
     }
   }
   // When portfolio gets swiped
-  portfolioContainer.addEventListener(
-    "touchend",
-    throttleFunction(() => {
-      // Find the current image, and call it in showSlide
-      window.clearTimeout(isBrowsing);
-      // Wait till the css scroll snap takes effect
-      setTimeout(() => {
-        scrollLeft = portfolioContainer.scrollLeft;
-        imageNumber = scrollLeft / screenWidth;
-        showSlide(Math.round(imageNumber));
-      }, 200);
-    }, 300)
-  );
+  // portfolioContainer.addEventListener(
+  //   "touchend",
+  //   throttleFunction(() => {
+  //     // Find the current image, and call it in showSlide
+  //     window.clearTimeout(isBrowsing);
+  //     // Wait till the css scroll snap takes effect
+  //     setTimeout(() => {
+  //       scrollLeft = portfolioContainer.scrollLeft;
+  //       imageNumber = scrollLeft / screenWidth;
+  //       showSlide(Math.round(imageNumber));
+  //     }, 200);
+  //   }, 300)
+  // );
 
   // Start from the first image
   portfolioContainer.scrollLeft = 0;
@@ -147,39 +147,52 @@ const throttleFunction = (func, delay) => {
 };
 // Next/previous controls
 function plusSlides(n) {
+  console.log("N in the plusSides function: ", n);
+  console.log("slideIndex in the plusSides function: ", slideIndex);
   window.clearTimeout(isBrowsing);
   showSlide((slideIndex += n));
 }
 
 function showSlide(n) {
   const maxNum = slides.length;
+  if (n == -1){
+    n = 5;
+  }
   n = Math.abs(n % maxNum);
+  console.log("N in the showSlide function: ", n);
+  console.log("slideIndex in the showSlide function: ", slideIndex);
   slideIndex = n;
-  portfolioContainer.scroll({
-    left: n * screenWidth,
-    behavior: "smooth",
-  });
+  // portfolioContainer.scroll({
+  //   left: n * screenWidth,
+  //   behavior: "smooth",
+  // });
   // Start every video from the beginning and play it
   slides[n].querySelector("video").currentTime = 0;
   // Problems happen with these videos, so this is a manual fix
   // TODO: Find a better fix
-  if (n == 0 || n == 2) slides[n].querySelector("video").load();
-  else
-    slides[n]
-      .querySelector("video")
-      .play()
-      .catch(function (e) {
-        console.log("Error playing video\n", e);
-      });
-  console.log(usedDevice);
-  // If you are on desktop, the appear class will get toggled
-  if (usedDevice == "desktop") {
+  // if (n == 0 || n == 2) slides[n].querySelector("video").load();
+  // else
+  //   slides[n]
+  //     .querySelector("video")
+  //     .play()
+  //     .catch(function (e) {
+  //       console.log("Error playing video\n", e);
+  //     });
+  slides[n]
+  .querySelector("video")
+  .play()
+  .catch(function (e) {
+    console.log("Error playing video\n", e);
+  });
+  // If you are on desktop, the appear class will get toggled 
+  // if (usedDevice == "desktop") {
     // Cycle from 0 to number of slides
     for (i = 0; i < slides.length; i++) {
       slides[i].classList.remove("appear");
     }
+
     slides[n].classList.add("appear");
-  } 
+  // } 
 
   // Auto browse every 4.5 seconds
   isBrowsing = setTimeout(function () {
