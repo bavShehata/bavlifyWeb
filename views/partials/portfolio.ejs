@@ -4,7 +4,7 @@
     <% var i = 0; portfolios.forEach((portfolio) => { i++ %>
     <div class="mySlides fade">
       <div class="slider">
-        <a href="<%=portfolio.websiteURL%>">
+        <a href="<%=portfolio.websiteURL%>" target="_blank">
           <div class="desktop">
             <!-- The first three videos are mobile, so we show the image in the desktop -->
             <% if (portfolio.id < 4) {%>
