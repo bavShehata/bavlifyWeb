@@ -3,56 +3,56 @@
     {
       "id": 1,
       "title": "iTunes Clone",
-      "desktopURL": "\\portfolio\\Samples\\iTunesClone\\desktopTunes.jpg",
-      "mobileURL": "\\portfolio\\Samples\\iTunesClone\\mobileTunes.jpg",
-      "websiteURL": "\\portfolio\\Samples\\iTunesClone\\index.html",
-      "videoURLwebm": "\\portfolio\\Samples\\iTunesClone\\mtunes.webm",
-      "videoURLmp4": "\\portfolio\\Samples\\iTunesClone\\mtunes.mp4"
+      "desktopURL": "\\portfolio\\iTunesClone\\desktopTunes.jpg",
+      "mobileURL": "\\portfolio\\iTunesClone\\mobileTunes.jpg",
+      "websiteURL": "\\portfolio\\iTunesClone\\index.html",
+      "videoURLwebm": "\\portfolio\\iTunesClone\\mtunes.webm",
+      "videoURLmp4": "\\portfolio\\iTunesClone\\mtunes.mp4"
     },
     {
       "id": 2,
       "title": "Parallax Website",
-      "desktopURL": "\\portfolio\\Samples\\parallaxWebsite\\desktopParallax.jpg",
-      "mobileURL": "\\portfolio\\Samples\\parallaxWebsite\\mobileParallax.jpg",
-      "websiteURL": "\\portfolio\\Samples\\parallaxWebsite\\index.html",
-      "videoURLwebm": "\\portfolio\\Samples\\parallaxWebsite\\mparallax.webm",
-      "videoURLmp4": "\\portfolio\\Samples\\parallaxWebsite\\mparallax.mp4"
+      "desktopURL": "\\portfolio\\parallaxWebsite\\desktopParallax.jpg",
+      "mobileURL": "\\portfolio\\parallaxWebsite\\mobileParallax.jpg",
+      "websiteURL": "\\portfolio\\parallaxWebsite\\index.html",
+      "videoURLwebm": "\\portfolio\\parallaxWebsite\\mparallax.webm",
+      "videoURLmp4": "\\portfolio\\parallaxWebsite\\mparallax.mp4"
     },
     {
       "id": 3,
       "title": "Photography Site",
-      "desktopURL": "\\portfolio\\Samples\\photographySite\\desktopPhotography.jpg",
-      "mobileURL": "\\portfolio\\Samples\\photographySite\\mobilePhotography.jpg",
-      "websiteURL": "\\portfolio\\Samples\\photographySite\\index.html",
-      "videoURLwebm": "\\portfolio\\Samples\\photographySite\\mphoto.webm",
-      "videoURLmp4": "\\portfolio\\Samples\\photographySite\\mphoto.mp4"
+      "desktopURL": "\\portfolio\\photographySite\\desktopPhotography.jpg",
+      "mobileURL": "\\portfolio\\photographySite\\mobilePhotography.jpg",
+      "websiteURL": "\\portfolio\\photographySite\\index.html",
+      "videoURLwebm": "\\portfolio\\photographySite\\mphoto.webm",
+      "videoURLmp4": "\\portfolio\\photographySite\\mphoto.mp4"
     },
     {
       "id": 4,
       "title": "Pluralsight Clone",
-      "desktopURL": "\\portfolio\\Samples\\pluralsightClone\\desktopPlural.jpg",
-      "mobileURL": "\\portfolio\\Samples\\pluralsightClone\\mobilePlural.jpg",
-      "websiteURL": "\\portfolio\\Samples\\pluralsightClone\\index.html",
-      "videoURLwebm": "\\portfolio\\Samples\\pluralsightClone\\dplural.webm",
-      "videoURLmp4": "\\portfolio\\Samples\\pluralsightClone\\dplural.mp4"
+      "desktopURL": "\\portfolio\\pluralsightClone\\desktopPlural.jpg",
+      "mobileURL": "\\portfolio\\pluralsightClone\\mobilePlural.jpg",
+      "websiteURL": "\\portfolio\\pluralsightClone\\index.html",
+      "videoURLwebm": "\\portfolio\\pluralsightClone\\dplural.webm",
+      "videoURLmp4": "\\portfolio\\pluralsightClone\\dplural.mp4"
     },
     {
       "id": 5,
       "title": "ACME Clone",
-      "desktopURL": "\\portfolio\\Samples\\responsiveGridWebsite\\desktopAcme.jpg",
-      "mobileURL": "\\portfolio\\Samples\\responsiveGridWebsite\\mobileAcme.jpg",
-      "websiteURL": "\\portfolio\\Samples\\responsiveGridWebsite\\index.html",
-      "videoURLwebm": "\\portfolio\\Samples\\responsiveGridWebsite\\dacme.webm",
-      "videoURLmp4": "\\portfolio\\Samples\\responsiveGridWebsite\\dacme.mp4"
+      "desktopURL": "\\portfolio\\responsiveGridWebsite\\desktopAcme.jpg",
+      "mobileURL": "\\portfolio\\responsiveGridWebsite\\mobileAcme.jpg",
+      "websiteURL": "\\portfolio\\responsiveGridWebsite\\index.html",
+      "videoURLwebm": "\\portfolio\\responsiveGridWebsite\\dacme.webm",
+      "videoURLmp4": "\\portfolio\\responsiveGridWebsite\\dacme.mp4"
     },
     {
       "id": 6,
       "title": "Blur Landing",
-      "desktopURL": "\\portfolio\\Samples\\blurLanding\\desktopBlur.jpg",
-      "mobileURL": "\\portfolio\\Samples\\blurLanding\\mobileBlur.jpg",
-      "websiteURL": "\\portfolio\\Samples\\blurLanding\\index.html",
-      "videoURLwebm": "\\portfolio\\Samples\\blurLanding\\dblur.webm",
-      "videoURLmp4": "\\portfolio\\Samples\\blurLanding\\dblur.mp4"
+      "desktopURL": "\\portfolio\\blurLanding\\desktopBlur.jpg",
+      "mobileURL": "\\portfolio\\blurLanding\\mobileBlur.jpg",
+      "websiteURL": "\\portfolio\\blurLanding\\index.html",
+      "videoURLwebm": "\\portfolio\\blurLanding\\dblur.webm",
+      "videoURLmp4": "\\portfolio\\blurLanding\\dblur.mp4"
     }
   ],
   "contact": [
