@@ -1,10 +1,10 @@
-const mongoose = require('mongoose');
-const Contact = require('../models/contactModel');
-const Portfolio = require('../models/portfolioModel');
-const { body, validationResult } = require('express-validator');
-const axios = require('axios');
-const nodemailer = require('nodemailer');
-require('dotenv/config');
+const mongoose = require("mongoose");
+const Contact = require("../models/contactModel.min.js");
+const Portfolio = require("../models/portfolioModel.min.js");
+const { body, validationResult } = require("express-validator");
+const axios = require("axios");
+const nodemailer = require("nodemailer");
+require("dotenv/config");
 
 const reg = {
   name: /^[a-z-_]{1,20}$/i,
@@ -36,10 +36,10 @@ module.exports = {
     return;
   },
   sanitizeContact: [
-    body('fname').escape().trim(),
-    body('lname').escape().trim(),
-    body('email').trim().normalizeEmail().escape(),
-    body('message').trim().escape(),
+    body("fname").escape().trim(),
+    body("lname").escape().trim(),
+    body("email").trim().normalizeEmail().escape(),
+    body("message").trim().escape(),
   ],
   postContact: async (req, res) => {
     try {
@@ -47,10 +47,10 @@ module.exports = {
       if (!req.validInput) {
         // Input error not validated
 
-        console.log('COULD NOT BE VALIDATED!!!', message);
+        console.log("COULD NOT BE VALIDATED!!!", message);
         return;
       }
-      console.log('All input is valid');
+      console.log("All input is valid");
 
       // Send me an email
 
@@ -97,18 +97,18 @@ module.exports = {
         message,
       });
       // JSON way
-      console.log('Contact created successfully: ', email);
+      console.log("Contact created successfully: ", email);
       // The mongo way
       // const portfolios = await Portfolio.find();
       // The JSON-server way
       // Email is only sent through mobile data, not uni wifi??????
       // uri = 'http://localhost:3000/portfolios?_sort=id&_order=desc';
       uri =
-        'https://my-json-server.typicode.com/bavShehata/bavlifyWeb/portfolios';
+        "https://my-json-server.typicode.com/bavShehata/bavlifyWeb/portfolios";
       const result = await axios.get(uri);
       const portfolios = result.data;
-      console.log('Number of portfolios: ', portfolios.length); // The JSON-server way
-      res.render('mainViews/index.ejs', { portfolios, contactSuccess: 1 });
+      console.log("Number of portfolios: ", portfolios.length); // The JSON-server way
+      res.render("mainViews/index.ejs", { portfolios, contactSuccess: 1 });
     } catch (e) {
       console.log("Couldn't add contact\n", e);
     }

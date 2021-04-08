@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const Portfolio = require('../models/portfolioModel');
+const Portfolio = require('../models/portfolioModel.min.js');
 var uri =
   'https://my-json-server.typicode.com/bavShehata/bavlifyWeb/portfolios';
 const axios = require('axios');
