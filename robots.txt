@@ -1,0 +1,3 @@
+# Only allow accessing the main page
+user-agent: *
+disallow: /portfolio*
