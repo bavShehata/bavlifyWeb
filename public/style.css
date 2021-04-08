@@ -240,7 +240,7 @@ main {
   z-index: 5;
 }
 #portfolio {
-  overflow:hidden;
+  overflow: hidden;
   padding: 2rem 0;
   background-color: #000;
 }
@@ -253,18 +253,17 @@ main {
   height: calc(60vw / 1.73 + 5rem);
   margin: 0;
   /* scroll-snap-type: x mandatory; */
-  --device:mobile;
+  --device: mobile;
   overflow-x: auto;
-
 }
-.mySlides{
-  transition: transform .5s ease-out;
+.mySlides {
+  transition: transform 0.5s ease-out;
   /* scroll-snap-align: start;
   scroll-snap-stop: always; */
 }
 .mySlides {
   /* commenting this causes the error (The position), the error of the second vid not working and the first not repeating */
-  position: absolute; 
+  position: absolute;
   overflow: hidden;
   top: 0;
   left: 0;
@@ -284,7 +283,6 @@ main {
   align-items: center;
   width: 90vw;
   margin: 0 5vw;
-
 }
 .prev,
 .next {
@@ -292,52 +290,51 @@ main {
 }
 /* For desktop, we don't do swipes */
 /* @media (hover: hover) { */
-  #portfolio .container {
-    display: block; 
-    /* scroll-snap-type:none; */
-    overflow: auto;
-    --device:desktop;
-
-  }
-  .mySlides {
-    /* commenting this causes the error (The position), the error of the second vid not working and the first not repeating */
-    position: absolute; 
-    top: 0;
-    left: 0;
-    right: 0;
-    visibility: hidden;
-    opacity: 0;
-    transition: visibility 0s, opacity 0.5s linear;
-  }
-  .appear {
-    visibility: visible;
-    opacity: 1;
-  }
-  .prev,
-  .next {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    top: 0;
-    background-color: rgba(71, 4, 75, 0.3);
-    height: 100%;
-    border-radius: 5px;
-  }
-  .prev:hover,
-  .next:hover {
-    background-color: rgba(71, 4, 75, 0.5);
-  }
-  .prev {
-    left: 0;
-  }
-  .next {
-    right: 0;
-  }
-  .prev span,
-  .next span {
-    margin: 0 20px;
-  }
+#portfolio .container {
+  display: block;
+  /* scroll-snap-type:none; */
+  overflow: auto;
+  --device: desktop;
+}
+.mySlides {
+  /* commenting this causes the error (The position), the error of the second vid not working and the first not repeating */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s linear;
+}
+.appear {
+  visibility: visible;
+  opacity: 1;
+}
+.prev,
+.next {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  background-color: rgba(71, 4, 75, 0.3);
+  height: 100%;
+  border-radius: 5px;
+}
+.prev:hover,
+.next:hover {
+  background-color: rgba(71, 4, 75, 0.5);
+}
+.prev {
+  left: 0;
+}
+.next {
+  right: 0;
+}
+.prev span,
+.next span {
+  margin: 0 20px;
+}
 /* } */
 /* Considering the aspect ratio of both videos so that they can have equal height */
 .desktop video,
@@ -380,6 +377,7 @@ main {
   align-items: center;
 }
 #about img {
+  height: 16rem;
   height: calc(clamp(2rem, 5vw, 2.5rem) * 8);
 }
 #about a {
