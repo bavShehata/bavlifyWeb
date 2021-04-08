@@ -1,9 +1,10 @@
 /*Global*/
 *{
   margin: 0;
+  scroll-behavior: smooth;
+
 }
   body{
-  scroll-behavior: smooth;
   overflow-x: hidden;
   margin: 0;
   font-family: "Roboto Condensed", sans-serif;
