@@ -55,7 +55,17 @@
         </ul>
         <div class="responsivity">
           <a href="#showcase">myTunes</a>
-          <a href="#"><i class="fas fa-bars"></i></a>
+          <a
+            href="#"
+            onclick="event.preventDefault(); console.log(this.parentElement.querySelector('ul')); this.parentElement.querySelector('ul').classList.toggle('appear');"
+            ><i class="fas fa-bars"></i
+          ></a>
+          <ul>
+            <li><a href="#showcase">Overview</a></li>
+            <li><a href="#music">Music</a></li>
+            <li><a href="#video">Video</a></li>
+            <li><a href="#gift-cards">Gift Cards</a></li>
+          </ul>
         </div>
       </nav>
 

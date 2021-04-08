@@ -1,6 +1,7 @@
 /*Global*/
 * {
   margin-top: 0;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -304,6 +305,9 @@ footer p:last-of-type {
   }
 }
 @media (max-width: 585px) {
+  header {
+    position: relative;
+  }
   header ul {
     display: none;
   }
@@ -318,6 +322,24 @@ footer p:last-of-type {
     right: 10px;
     top: 7px;
     font-size: 0.8em;
+  }
+  .responsivity ul {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 30;
+    background-color: #555;
+    display: none;
+  }
+  .responsivity ul a {
+    display: block;
+  }
+  nav ul {
+    padding: 0;
+    margin: 0;
+  }
+  .appear {
+    display: block !important;
   }
 }
 @media (max-height: 580px) {
