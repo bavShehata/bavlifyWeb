@@ -12,9 +12,6 @@
   --tertiary-clr: #7c0dd1;
   --accent-clr: #9d36e1;
   --white-clr: #fff;
-  --large-circle-size: 60vw;
-  --medium-circle-size: calc(var(--large-circle-size) * 0.674);
-  --small-circle-size: calc(var(--large-circle-size) * 0.52);
   font-size: 62.5%;
   scroll-behavior: smooth;
 }
@@ -74,13 +71,13 @@ textarea {
 .btn {
   padding: 1rem 3rem;
   cursor: pointer;
-  background-color: var(--tertiary-clr);
+  background-color: var(--secondary-clr);
   color: var(--white-clr);
   border: 1px solid #888;
 }
 .btn:hover,
 .btn:focus {
-  background-color: var(--secondary-clr);
+  background-color: var(--accent-clr);
   color: #fff;
   border: 1px solid #555;
 }
@@ -161,6 +158,9 @@ nav a {
 }
 .grid {
   margin-top: 5rem;
+  --large-circle-size: 60vw;
+  --medium-circle-size: calc(var(--large-circle-size) * 0.674);
+  --small-circle-size: calc(var(--large-circle-size) * 0.52);
   display: grid;
   grid-template-columns: calc(
     var(--large-circle-size)+ (var(--medium-circle-size) / 2)+
@@ -237,6 +237,7 @@ nav a {
 }
 main {
   flex: 1 0 auto;
+  z-index: 5;
 }
 #portfolio {
   overflow:hidden;
@@ -319,13 +320,13 @@ main {
     justify-content: center;
     align-items: center;
     top: 0;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(71, 4, 75, 0.3);
     height: 100%;
     border-radius: 5px;
   }
   .prev:hover,
   .next:hover {
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(71, 4, 75, 0.5);
   }
   .prev {
     left: 0;
@@ -335,7 +336,7 @@ main {
   }
   .prev span,
   .next span {
-    margin: 0 10px;
+    margin: 0 20px;
   }
 /* } */
 /* Considering the aspect ratio of both videos so that they can have equal height */
