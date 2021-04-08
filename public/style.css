@@ -119,11 +119,11 @@ nav a {
   align-items: flex-end;
 }
 #hero {
-  min-height: 100vh;
+  min-height: max(100vh, 400px);
 }
 #hero .big-img {
   background-color: var(--main-clr);
-  min-height: 100vh;
+  min-height: max(100vh, 400px);
   position: absolute;
   top: 0;
   left: 0;
