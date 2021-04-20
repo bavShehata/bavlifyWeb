@@ -1,3 +1,9 @@
 # Only allow accessing the main page
 user-agent: *
-disallow: /portfolio*
+disallow: /portfolio/*.jpg
+
+user-agent: *
+disallow: /portfolio/*.png
+
+user-agent: *
+disallow: /portfolio/*.jpeg
