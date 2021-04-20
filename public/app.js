@@ -211,11 +211,13 @@ function showSlide(n) {
 
   slides[n].classList.add("appear");
   // }
-
-  // Auto browse every 4.5 seconds
+  // Make videos a bit slower since the vids r only 4 seconds and the slideshow is 6 seconds
+  if (n!=1)
+  slides[n].querySelector("video").playbackRate = 0.75;
+  // Auto browse every 6 seconds
   isBrowsing = setTimeout(function () {
     showSlide(n + 1);
-  }, 4500);
+  }, 6000);
 }
 
 //themes
