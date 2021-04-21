@@ -1,7 +1,6 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 const nodemailer = require('nodemailer');
-const { isEmail } = require('validator');
 
 const ContactSchema = new Schema({
   fname: { type: String, Required: [true, 'Please input a first name'] },
@@ -10,7 +9,6 @@ const ContactSchema = new Schema({
     type: String,
     Required: [true, 'Please input an email address'],
     lowercase: true,
-    validate: [isEmail, 'Please enter a valid Email'],
   },
   message: { type: String, Required: [true, 'Please input a message'] },
 });
