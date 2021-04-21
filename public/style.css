@@ -12,6 +12,7 @@
   --tertiary-clr: #7c0dd1;
   --accent-clr: #9d36e1;
   --white-clr: #fff;
+  --black-clr: #000;
   font-size: 62.5%;
   scroll-behavior: smooth;
 }
@@ -435,7 +436,7 @@ main {
 input,
 textarea {
   font-family: "Bodoni Moda", serif;
-  color: #fff;
+  color: var(--white-clr);
   background-color: var(--secondary-clr);
   border: 2px solid var(--tertiary-clr);
   margin-top: 0.3rem;
@@ -443,8 +444,8 @@ textarea {
 }
 input:focus,
 textarea:focus {
-  border-color: var(--secondary-clr);
-  background-color: var(--accent-clr);
+  border-color: var(--tertiary-clr);
+  background-color: var(--primary-clr);
 }
 #email {
   margin-bottom: 0.3rem;
