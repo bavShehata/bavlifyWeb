@@ -7,8 +7,8 @@ const nodemailer = require("nodemailer");
 require("dotenv/config");
 
 const reg = {
-  name: /^[a-z-_]{1,20}$/i,
-  email: /^([^@]+)@(.+)\.(.+)$/i, //And send a confirmation Email anyways
+  name: /^[^\x05]{1,20}$/,
+  email: /^[^\x05]{1,30}$/, //And send a confirmation Email anyways
   message: /^[^\x05]{1,1000}$/,
 };
 module.exports = {
