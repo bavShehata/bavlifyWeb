@@ -360,7 +360,7 @@ main {
   position: relative;
   left: 45%;
   transform: translateX(-50%);
-  max-width: clamp(500px, 80%, 800px);
+  max-width: clamp(500px, 80%, 1200px);
   margin: 0 5vw;
   text-align: left;
   padding: 5rem 0;
@@ -372,17 +372,39 @@ main {
 #about p {
   font-size: clamp(1.2rem, 1.3vw, 2.3rem);
 }
-#aboutMe {
-  display: flex;
-  column-gap: clamp(10px, 5vw, 60px);
-  align-items: center;
-}
 #about img {
   height: 16rem;
-  height: calc(clamp(2rem, 5vw, 2.5rem) * 8);
+  height: calc(clamp(2rem, 5vw, 2.5rem) * 10);
 }
 #about a {
   text-decoration: underline;
+}
+#aboutMe {
+  display: flex;
+  gap: clamp(10px, 5vw, 60px);
+  align-items: center;
+  flex-direction: column;
+}
+#aboutMe a{
+  order:0;
+}
+#aboutMe p{
+ order: 1;
+}
+@media (min-width: 800px) {
+  #about img {
+    height: 17rem;
+    height: calc(clamp(2rem, 3.7vw, 6rem) * 8);
+  }
+  #aboutMe {
+    flex-direction: row;
+  }
+  #aboutMe a{
+    order:1;
+  }
+  #aboutMe p{
+   order: 0;
+  }
 }
 .lets {
   font-size: 120%;
