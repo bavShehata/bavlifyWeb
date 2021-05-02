@@ -12,3 +12,7 @@ RewriteCond %{HTTP:X-Forwarded-Proto} !https
 
 #If neither above conditions are met, redirect to https
 RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+#Forcing the ‘www’ subdomain
+RewriteCond %{HTTP_HOST}  !^www\.example\.com$ [NC]
+RewriteRule ^(.*) http://www.example.com/$1 [L,R]
