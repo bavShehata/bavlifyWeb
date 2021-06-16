@@ -36,21 +36,21 @@ mongoose
 const port = process.env.PORT ?? 8001;
 
 // DEV OPTIONS
-// var https = require('https');
+var https = require('https');
 
-// var fs = require('fs');
+var fs = require('fs');
 
-// var https_options = {
+var https_options = {
 
-//   key: fs.readFileSync("/home/bavshehata/cert-keys/server.key"),
+  key: fs.readFileSync("/home/bavshehata/cert-keys/server.key"),
 
-//   cert: fs.readFileSync("/home/bavshehata/cert-keys/server.crt"),
+  cert: fs.readFileSync("/home/bavshehata/cert-keys/server.crt"),
 
-// };
-// https.createServer(https_options, app).listen(port);
-app.listen(port, () => {
-  // console.log(`Listening on port ${port}`);
-});
+};
+https.createServer(https_options, app).listen(port);
+// app.listen(port, () => {
+//   // console.log(`Listening on port ${port}`);
+// });
 // middleware & static files
 app.use(favicon(path.join(__dirname, 'public/assets/hero', 'logo.png')));
 app.use(cors());

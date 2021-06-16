@@ -24,23 +24,23 @@
   // Fisrt, scroll to the top
   window.scrollTo(0, 0);
 
-  const popup = document.querySelector('.contactConfirmation');
-  const popupWindow = popup.querySelector('div');
-  const popupBtn = popup.querySelector('.btn');
+  const popup = document.querySelector(".contactConfirmation");
+  const popupWindow = popup.querySelector("div");
+  const popupBtn = popup.querySelector(".btn");
   // If contact creation was successful
   // Stop scrolling
-  document.body.style.overflowY = 'hidden';
+  document.body.style.overflowY = "hidden";
   // Close popup if clicked outside the window
-  popup.addEventListener('click', () => {
+  popup.addEventListener("click", () => {
     if (!popupWindow.contains(event.target)) {
-      popup.style.display = 'none';
-      document.body.style.overflowY = 'auto';
+      popup.style.display = "none";
+      document.body.style.overflowY = "auto";
     }
   });
   // Close popup if clicked on the button
-  popupBtn.addEventListener('click', () => {
-    popup.style.display = 'none';
-    document.body.style.overflowY = 'auto';
+  popupBtn.addEventListener("click", () => {
+    popup.style.display = "none";
+    document.body.style.overflowY = "auto";
   });
 </script>
 <% }%>
