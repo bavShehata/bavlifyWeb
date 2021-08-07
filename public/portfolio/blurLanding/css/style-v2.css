@@ -42,7 +42,7 @@ header:hover .big-image {
   filter: blur(0);
 }
 header img {
-  width: clamp(100px, 25%, 800px);
+  width: clamp(100px, 20%, 800px);
   height: auto;
   margin-top: -25%;
 }
