@@ -1,7 +1,7 @@
 /*Global*/
 body {
   margin: 0;
-  font-size: 62.5%;
+  font-size: 1vw;
   color: white;
   background-color: #191919;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -10,19 +10,23 @@ body {
 }
 h2 {
   color: white;
-  font-size: 1.9em;
+  font-size: clamp(14px, 1.7em, 50px);
+  font-weight: 400;
 }
 h1 {
   color: white;
-  font-size: 3.5em;
+  font-size: clamp(18px, 3.5em, 70px);
+}
+h3 {
+  font-size: clamp(12px, 1.5em, 45px);
 }
 p {
   color: white;
-  font-size: 1.7em;
+  font-size: clamp(10px, 1.3em, 30px);
   line-height: 1.5em;
 }
 .container {
-  max-width: 960px;
+  max-width: 1400px;
   margin: 0 auto;
   overflow: hidden;
   padding: 4rem 1rem;
@@ -38,16 +42,21 @@ header:hover .big-image {
   filter: blur(0);
 }
 header img {
-  padding-top: 12em;
-  width: 180px;
+  width: clamp(100px, 25%, 800px);
   height: auto;
+  margin-top: -25%;
 }
 header h1 {
   font-weight: 400;
 }
 #front {
   transition: all 1000ms;
-  width: 300px;
+  width: 80%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin: 0 auto;
 }
 .big-image {
@@ -66,7 +75,8 @@ header h1 {
 main #services {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-column-gap: 0;
+  grid-column-gap: 50px;
+  margin: 180px auto;
 }
 main #services i {
   font-size: 5em;
@@ -79,6 +89,7 @@ main .grid {
   grid-template-columns: repeat(2, 1fr);
   grid-column-gap: 30px;
   text-align: left;
+  margin: 70px auto;
 }
 main #about-us i {
   font-size: 17em;
@@ -94,24 +105,23 @@ main #about-us p {
 main #about-us h2 {
   margin-bottom: 0;
   color: #333;
+  font-weight: bold;
 }
 /*Media Query*/
 
 @media (max-width: 560px) {
+  header img {
+    margin-top: -60%;
+  }
   #front p {
     display: none;
   }
-  header {
-    height: 550px;
-  }
   main #services {
     display: inline-block;
+    margin: 20px auto;
   }
   main .box {
-    padding-bottom: 70px;
-  }
-  main .box:last-of-type {
-    padding-bottom: 30px;
+    padding-bottom: 10px;
   }
 
   main .grid {
