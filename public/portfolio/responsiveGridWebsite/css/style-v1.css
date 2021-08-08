@@ -1,5 +1,6 @@
 /*Global*/
-* {  scroll-behavior: smooth;
+* {
+  scroll-behavior: smooth;
 
   transition: all 0.5s ease-in-out;
 }
@@ -9,7 +10,7 @@ body {
   background-color: #333;
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
-  font-size: 62.5%;
+  font-size: 1vw;
   color: #333;
 }
 img {
@@ -17,21 +18,21 @@ img {
   height: auto;
 }
 .container {
-  width: 70%;
+  max-width: 1600px;
+  width: 80vw;
   margin: 0 auto;
 }
-
 p {
-  font-size: 1.8em;
+  font-size: clamp(16px, 1.3em, 30px);
 }
 h1 {
-  font-size: 3.5em;
+  font-size: clamp(30px, 3em, 60px);
 }
 h2 {
-  font-size: 2.6em;
+  font-size: clamp(24px, 1.7em, 45px);
 }
 h3 {
-  font-size: 2.1em;
+  font-size: clamp(20px, 1.5em, 40px);
 }
 /*Header*/
 #bigimg {
@@ -39,7 +40,7 @@ h3 {
   top: 0;
   height: 100vh;
   width: 100%;
-  background: url('../img/showcase.png') no-repeat center;
+  background: url("../img/showcase.png") no-repeat center;
   background-size: cover;
   opacity: 0.4;
   z-index: -1;
@@ -58,7 +59,7 @@ header a {
   text-decoration: none;
   background-color: #333333;
   color: white;
-  font-size: 1.6em;
+  font-size: 1.3em;
   border: 1px solid #666;
   padding: 1em 1.8em;
   margin-top: 1em;
@@ -76,14 +77,17 @@ main {
 }
 main h2 {
   margin: 0;
-  padding-top: 40px;
+  padding-top: 70px;
+}
+main .item3 {
+  padding-bottom: 70px;
 }
 /*Section-b*/
 #section-b .grid-container {
   padding-top: 40px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-column-gap: 20px;
+  grid-column-gap: 30px;
   margin-bottom: 2em;
 }
 #section-b .grid-container div {
@@ -92,12 +96,15 @@ main h2 {
 #section-b p {
   color: #333;
   line-height: 2em;
-  padding-bottom: 1em;
+  padding-bottom: 2em;
+  width: 80%;
+  margin: 0 auto;
 }
 /*Statement*/
 #statement {
   min-height: 250px;
   background-color: #fff;
+  padding-bottom: 60px;
 }
 #statement h2 {
   padding-top: 70px;
@@ -145,8 +152,30 @@ footer a {
   color: #0f7ed4;
   text-decoration: none;
 }
-
+@media (min-width: 1800px) {
+  p {
+    font-size: clamp(16px, 4em, 35px);
+  }
+  h1 {
+    font-size: clamp(30px, 10em, 80px);
+  }
+  h2 {
+    font-size: clamp(24px, 7em, 45px);
+  }
+  h3 {
+    font-size: clamp(20px, 4.5em, 40px);
+  }
+  header a {
+    font-size: 1.6em;
+  }
+}
 @media only screen and (max-width: 900px) {
+  body {
+    text-align: left;
+  }
+  header {
+    text-align: center;
+  }
   main div,
   #section-b div,
   #statement div {
@@ -172,5 +201,8 @@ footer a {
   }
   header p {
     display: none;
+  }
+  footer {
+    font-size: 0.75em;
   }
 }
