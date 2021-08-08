@@ -1,10 +1,10 @@
 /*Global*/
 body {
   margin: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   color: white;
   background-color: #181818;
-  font-size: 62.5%;
+  font-size: 1vw;
   text-align: center;
 }
 aside {
@@ -13,8 +13,9 @@ aside {
 /*Header*/
 header img {
   width: 45%;
-  margin-top: 3em;
   margin: inherit auto;
+  margin-bottom: 10px;
+  margin-top: 30px;
 }
 header form {
   width: 70%;
@@ -30,10 +31,10 @@ header ul {
 
 header label {
   font-weight: 300;
-  font-size: 1.4em;
+  font-size: clamp(13px, 1.2em, 40px);
 }
 header .label {
-  margin: 1.5em 0 0.5em 0;
+  margin: 20px 0 10px 0;
 }
 header input {
   width: 100%;
@@ -42,11 +43,11 @@ header input {
   border: 2px solid #555555;
   color: white;
   padding: 0.5rem;
+  font-size: clamp(13px, 1em, 40px);
 }
 header button {
   text-align: center;
-  margin-top: 1em;
-  margin-bottom: 3em;
+  margin-top: 20px;
   padding: 1em;
   background-color: #f96816;
   color: white;
@@ -61,13 +62,13 @@ header button:hover {
 main a {
   text-decoration: none;
   color: white;
-  font-size: 1.4em;
+  font-size: clamp(13px, 1.2em, 40px);
   line-height: 2.5;
   font-weight: 300;
 }
 main p {
   color: #ccc;
-  font-size: 1.9em;
+  font-size: clamp(17px, 1.6em, 50px);
   position: relative;
   font-weight: 300;
   width: 100%;
@@ -75,7 +76,7 @@ main p {
 }
 main p::after,
 main p::before {
-  content: '';
+  content: "";
   margin: 0 1em;
   width: 19%;
   height: 1px;
@@ -89,6 +90,7 @@ main p::before {
   border: 1px solid white;
   padding: 1em 17%;
   transition: all 300ms ease-in;
+  font-size: clamp(13px, 1.1em, 35px);
 }
 .btn:hover {
   color: #f96816;
@@ -100,7 +102,7 @@ footer {
 }
 footer p {
   margin-top: 4em;
-  font-size: 1.3em;
+  font-size: clamp(13px, 1.1em, 35px);
   color: #ccc;
   font-weight: 300;
 }
@@ -111,11 +113,11 @@ footer ul {
 }
 footer a {
   color: #f96816;
-  font-size: 1.3em;
+  font-size: clamp(13px, 1.1em, 35px);
   font-weight: 300;
 }
 footer .terms::after {
-  content: '|';
+  content: "|";
   padding: 0 4px;
   color: white;
 }
@@ -126,34 +128,54 @@ footer ul li:last-child {
 @media (min-width: 775px) {
   body {
     height: 100vh;
+    display: flex;
   }
   #main {
-    width: 40%;
-    float: left;
-    height: 100vh;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  header {
+    width: 100%;
+  }
+  header img {
+    width: 45%;
+    margin: inherit auto;
+    margin-bottom: 30px;
+    margin-top: 30px;
   }
   aside {
-    display: inline-block;
-    height: 100vh;
-    width: 60%;
-    float: right;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     background-image: url(https://image.ibb.co/cO9Lxq/login-bg.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
   }
   aside h1 {
-    font-size: 4.8em;
-    margin-top: 5em;
     font-weight: 300;
+    font-size: clamp(26px, 2.2em, 70px);
   }
   aside .bold {
     font-weight: 500;
   }
   aside .btn {
-    font-size: 1.6em;
     font-weight: 300;
     text-decoration: none;
     color: white;
+  }
+}
+
+@media (min-height: 1000px) {
+  body {
+    font-size: 1.2vw;
+  }
+  header .label {
+    margin: 40px 0 20px 0;
   }
 }
